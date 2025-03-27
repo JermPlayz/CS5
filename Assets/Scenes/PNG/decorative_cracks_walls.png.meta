@@ -122,9 +122,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 335
+        y: 336
         width: 128
-        height: 177
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,10 +143,10 @@ TextureImporter:
       name: decorative_cracks_walls_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 287
-        width: 31
-        height: 47
+        x: 2
+        y: 288
+        width: 29
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,10 +165,10 @@ TextureImporter:
       name: decorative_cracks_walls_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 287
-        width: 31
-        height: 47
+        x: 34
+        y: 288
+        width: 29
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +187,10 @@ TextureImporter:
       name: decorative_cracks_walls_3
       rect:
         serializedVersion: 2
-        x: 73
-        y: 292
-        width: 8
-        height: 42
+        x: 74
+        y: 293
+        width: 6
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +209,10 @@ TextureImporter:
       name: decorative_cracks_walls_4
       rect:
         serializedVersion: 2
-        x: 89
-        y: 292
-        width: 15
-        height: 42
+        x: 90
+        y: 293
+        width: 13
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: decorative_cracks_walls_5
       rect:
         serializedVersion: 2
-        x: 111
-        y: 292
-        width: 9
-        height: 42
+        x: 112
+        y: 293
+        width: 7
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,7 +256,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 128
-        height: 289
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 56bed98b07720bd4e9c008b8f9703228
     internalID: 0
     vertices: []
     indices: 
