@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Bug
   m_EditorClassIdentifier: 
   name: 
-  description: 
+  description: Sends out a bug to attack the opponent from 2 tiles away.
   type: 3
   power: 1000000000
-  accuracy: 0
-  pp: 0
-  range: 0
+  accuracy: 70
+  pp: 15
+  range: 2
