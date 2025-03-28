@@ -17,14 +17,13 @@ MonoBehaviour:
   frontSprite: {fileID: 0}
   backSprite: {fileID: 0}
   type1: 1
-  type2: 0
-  maxHP: 0
-  attack: 0
-  defense: 0
-  spAttack: 0
-  spDefense: 0
-  speed: 0
-  expYield: 0
+  maxHP: 10
+  attack: 10
+  defense: 10
+  spAttack: 10
+  spDefense: 10
+  speed: 10
+  expYield: 10
   growthRate: 0
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 0084b6d981d3cd24aa2bda00f406a7a2, type: 2}

@@ -11,7 +11,6 @@ public class CharacterBase : ScriptableObject
     [SerializeField] Sprite frontSprite;
     [SerializeField] Sprite backSprite;
     [SerializeField] CharacterType type1;
-    [SerializeField] CharacterType type2;
 
     //Base Stats
     [SerializeField] int maxHP;
@@ -59,10 +58,6 @@ public class CharacterBase : ScriptableObject
     public CharacterType Type1
     {
         get{return type1;}
-    }
-    public CharacterType Type2
-    {
-        get{return type2;}
     }
     public int MaxHP
     {
