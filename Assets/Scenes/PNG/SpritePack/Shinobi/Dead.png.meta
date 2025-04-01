@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 92cef997718b3d04bace9907d9a44766
+guid: db9e2669566bc2840be1d003434d5b68
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5819917978337847198
-    second: black_BG_0
+      213: 2649847697073447219
+    second: Dead_0
+  - first:
+      213: -8293461521501190705
+    second: Dead_1
+  - first:
+      213: -1631342717326862633
+    second: Dead_2
+  - first:
+      213: -3927913518680497933
+    second: Dead_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: black_BG_0
+      name: Dead_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 38
         y: 0
-        width: 275
-        height: 183
+        width: 37
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e97acb8e09084c050800000000000000
-      internalID: 5819917978337847198
+      spriteID: 33123f4e07626c420800000000000000
+      internalID: 2649847697073447219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_1
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 39
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc50d84dfa4b7ec80800000000000000
+      internalID: -8293461521501190705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_2
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6dfca117e4c59e0800000000000000
+      internalID: -1631342717326862633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_3
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 0
+        width: 83
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0289a377f3d79c0800000000000000
+      internalID: -3927913518680497933
       vertices: []
       indices: 
       edges: []
@@ -134,8 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      black_BG_0: 5819917978337847198
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

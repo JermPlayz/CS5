@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 92cef997718b3d04bace9907d9a44766
+guid: 3a91c1bd29aa5e64590afc64558afbaf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5819917978337847198
-    second: black_BG_0
+      213: -928452794175279194
+    second: COUPON_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: black_BG_0
+      name: COUPON_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 275
-        height: 183
+        width: 1839
+        height: 2445
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e97acb8e09084c050800000000000000
-      internalID: 5819917978337847198
+      spriteID: 6afa6745a197d13f0800000000000000
+      internalID: -928452794175279194
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      black_BG_0: 5819917978337847198
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
