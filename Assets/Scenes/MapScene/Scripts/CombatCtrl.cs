@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public enum CombatState {SELECTOR, MOVEMENT, ACTION, COMBAT}
 
@@ -12,7 +13,7 @@ public class CombatCtrl : MonoBehaviour
     Vector2 worldPoint;
     RaycastHit2D hit;
     RaycastHit2D chosenCharacter;
-    [SerializeField] TileMap tileMap;
+    [SerializeField] Tilemap tileMap;
     private void Start()
     {
         combatState = CombatState.SELECTOR;
