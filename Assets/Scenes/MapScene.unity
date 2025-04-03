@@ -1904,10 +1904,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1687008496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc759ecbd017804292dc80a1b3cb2de, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ccbfa4278a7a9e4daf4dfa519c75fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: 1
+  character: 0
 --- !u!1 &2136189900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +1937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c5f880a94aa2b4985a974d3780e8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterCtrl: {fileID: 1687008501}
+  character1Ctrl: {fileID: 1687008501}
   worldCamera: {fileID: 1093738125}
   combatState: 0
 --- !u!4 &2136189902

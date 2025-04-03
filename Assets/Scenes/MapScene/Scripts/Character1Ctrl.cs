@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CharacterCtrl : MonoBehaviour
+public class Character1Ctrl : MonoBehaviour
 {
     public int character;
     Vector2 worldPoint;

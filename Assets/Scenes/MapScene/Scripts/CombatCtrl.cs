@@ -6,11 +6,13 @@ public enum CombatState {SELECTOR, MOVEMENT, ACTION, COMBAT}
 
 public class CombatCtrl : MonoBehaviour
 {
-    public CharacterCtrl characterCtrl;
+    public Character1Ctrl character1Ctrl;
     public Camera worldCamera;
     public CombatState combatState;
     Vector2 worldPoint;
     RaycastHit2D hit;
+    RaycastHit2D chosenCharacter;
+    [SerializeField] TileMap tileMap;
     private void Start()
     {
         combatState = CombatState.SELECTOR;
@@ -29,10 +31,32 @@ public class CombatCtrl : MonoBehaviour
 
                 if (hit.collider != null)
                 {
-                    Debug.Log("click on " + hit.collider.name);
-                    Debug.Log(hit.point);
-                } 
+                    chosenCharacter = hit;
+                    combatState = CombatState.MOVEMENT;
+                }
+                
             }
-        }        
+        }
+
+        if(combatState == CombatState.MOVEMENT)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                hit = Physics2D.Raycast(worldPoint, Vector2.down);
+
+                if (hit.collider != null)
+                {
+                    var tpos = tileMap.WorldToCell(hit.point);
+                    var tile = tileMap.GetTile(tpos);
+                    combatState = CombatState.ACTION;
+                }
+                
+            }
+        }
+
+        if(combatState == CombatState.ACTION)
+        {
+            
+        }
     }
 }
