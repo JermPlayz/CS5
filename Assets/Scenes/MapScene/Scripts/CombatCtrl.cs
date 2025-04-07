@@ -10,10 +10,10 @@ public class CombatCtrl : MonoBehaviour
     public Character1Ctrl character1Ctrl;
     public Camera worldCamera;
     public CombatState combatState;
+    [SerializeField] public Tilemap tileMap;
     Vector2 worldPoint;
     RaycastHit2D hit;
     RaycastHit2D chosenCharacter;
-    [SerializeField] Tilemap tileMap;
     private void Start()
     {
         combatState = CombatState.SELECTOR;
@@ -26,13 +26,14 @@ public class CombatCtrl : MonoBehaviour
 
         if(combatState == CombatState.SELECTOR)
         {
-            if (Input.GetMouseButtonDown(0))
+            if(Input.GetMouseButtonDown(0))
             {
                 hit = Physics2D.Raycast(worldPoint, Vector2.down);
 
                 if (hit.collider != null)
                 {
                     chosenCharacter = hit;
+                    Debug.Log(chosenCharacter.collider.name);
                     combatState = CombatState.MOVEMENT;
                 }
                 
@@ -41,6 +42,7 @@ public class CombatCtrl : MonoBehaviour
 
         if(combatState == CombatState.MOVEMENT)
         {
+            StartCoroutine(waitasecond());
             if (Input.GetMouseButtonDown(0))
             {
                 hit = Physics2D.Raycast(worldPoint, Vector2.down);
@@ -48,7 +50,9 @@ public class CombatCtrl : MonoBehaviour
                 if (hit.collider != null)
                 {
                     var tpos = tileMap.WorldToCell(hit.point);
+                    Debug.Log(tpos);
                     var tile = tileMap.GetTile(tpos);
+                    Debug.Log(tile);
                     combatState = CombatState.ACTION;
                 }
                 
@@ -59,5 +63,10 @@ public class CombatCtrl : MonoBehaviour
         {
             
         }
+    }
+
+    IEnumerator waitasecond()
+    {
+        yield return new WaitForSeconds(1);
     }
 }

@@ -2450,6 +2450,7 @@ MonoBehaviour:
   character1Ctrl: {fileID: 1687008501}
   worldCamera: {fileID: 1093738125}
   combatState: 0
+  tileMap: {fileID: 103660489}
 --- !u!4 &2136189902
 Transform:
   m_ObjectHideFlags: 0
