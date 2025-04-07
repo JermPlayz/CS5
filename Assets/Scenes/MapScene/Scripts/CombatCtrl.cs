@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public enum CombatState {SELECTOR, MOVEMENT, ACTION, COMBAT}
+public enum CombatState {SELECTOR, MOVEMENT, ACTION, ATTACKS, COMBAT}
 
 public class CombatCtrl : MonoBehaviour
 {
@@ -14,8 +14,10 @@ public class CombatCtrl : MonoBehaviour
     Vector2 worldPoint;
     RaycastHit2D hit;
     RaycastHit2D chosenCharacter;
+    public ActionUI actionUI;
     private void Start()
     {
+        actionUI.EnableActionSelector(false);
         combatState = CombatState.SELECTOR;
     }
 
@@ -58,10 +60,14 @@ public class CombatCtrl : MonoBehaviour
                 
             }
         }
-
         if(combatState == CombatState.ACTION)
         {
+            actionUI.EnableActionSelector(true);
+        }
 
+        if(combatState == CombatState.ATTACKS)
+        {
+            Debug.Log(chosenCharacter.collider.name);
         }
     }
     

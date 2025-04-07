@@ -17,6 +17,10 @@ public class ActionUI : MonoBehaviour
             actionButtons[i].interactable = enabled;
         }
     }
+    public void OnAttackButton()
+    {
+        Debug.Log("Button");
+    }
     // public void EnableMoveSelector(bool enabled)
     // {
     //     moveSelector.SetActive(enabled);
