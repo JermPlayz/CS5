@@ -61,10 +61,10 @@ public class CombatCtrl : MonoBehaviour
 
         if(combatState == CombatState.ACTION)
         {
-            
+
         }
     }
-
+    
     IEnumerator waitasecond()
     {
         yield return new WaitForSeconds(1);
