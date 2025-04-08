@@ -20,6 +20,7 @@ public class ActionUI : MonoBehaviour
     public void OnAttackButton()
     {
         Debug.Log("Button");
+        return;
     }
     // public void EnableMoveSelector(bool enabled)
     // {
