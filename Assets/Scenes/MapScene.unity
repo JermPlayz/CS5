@@ -2609,7 +2609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 2267834093551788515, guid: 080102b2092c851419af4bd72318a926, type: 3}
-  actionSelector: {fileID: 371259589}
+  actionSelector: {fileID: 1190310134}
   actionButtons:
   - {fileID: 1074874088}
 --- !u!4 &1190310136
@@ -2951,7 +2951,7 @@ MonoBehaviour:
   worldCamera: {fileID: 1093738125}
   combatState: 0
   tileMap: {fileID: 103660489}
-  actionUI: {fileID: 0}
+  actionUI: {fileID: 1190310135}
 --- !u!4 &2136189902
 Transform:
   m_ObjectHideFlags: 0
