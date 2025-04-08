@@ -48,17 +48,19 @@ public class CombatCtrl : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 hit = Physics2D.Raycast(worldPoint, Vector2.down);
+                Debug.Log(hit);
 
-                if (hit.collider != null)
-                {
-                    var tpos = tileMap.WorldToCell(hit.point);
+                //if (hit.collider != null)
+                //{
+                    var tpos = tileMap.WorldToCell(worldPoint);
                     Debug.Log(tpos);
                     var tile = tileMap.GetTile(tpos);
                     Debug.Log(tile);
-                    combatState = CombatState.ACTION;
-                }
+                    //combatState = CombatState.ACTION;
+                //}
                 
             }
+            
         }
         if(combatState == CombatState.ACTION)
         {
