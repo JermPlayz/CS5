@@ -56,7 +56,7 @@ public class CombatCtrl : MonoBehaviour
                     Debug.Log(tpos);
                     var tile = tileMap.GetTile(tpos);
                     Debug.Log(tile);
-                    //combatState = CombatState.ACTION;
+                    combatState = CombatState.ACTION;
                 //}
                 
             }

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Character
+public class Character : MonoBehaviour
 {
     [SerializeField] CharacterBase _base {get; set;}
     [SerializeField] int level {get; set;}

@@ -8,8 +8,8 @@ public class CharacterBase : ScriptableObject
     [SerializeField] string name;
     [TextArea]
     [SerializeField] string description;
-    [SerializeField] Sprite frontSprite;
-    [SerializeField] Sprite backSprite;
+    //[SerializeField] Sprite frontSprite;
+    // [SerializeField] Sprite backSprite;
     [SerializeField] CharacterType type1;
 
     //Base Stats
@@ -47,14 +47,14 @@ public class CharacterBase : ScriptableObject
     {
         get{return description;}
     }
-    public Sprite FrontSprite
-    {
-        get{return frontSprite;}
-    }
-    public Sprite BackSprite
-    {
-        get{return backSprite;}
-    }
+    // public Sprite FrontSprite
+    // {
+    //     get{return frontSprite;}
+    // }
+    // public Sprite BackSprite
+    // {
+    //     get{return backSprite;}
+    // }
     public CharacterType Type1
     {
         get{return type1;}
