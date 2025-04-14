@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Character : MonoBehaviour
+public class Character
 {
     [SerializeField] CharacterBase _base {get; set;}
     [SerializeField] int level {get; set;}

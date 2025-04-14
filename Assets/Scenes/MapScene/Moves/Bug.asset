@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6e0dfaa242e4940a6268cca5df3ad9, type: 3}
   m_Name: Bug
   m_EditorClassIdentifier: 
-  name: 
+  name: Bug
   description: Sends out a bug to attack the opponent from 2 tiles away.
   type: 3
   power: 10

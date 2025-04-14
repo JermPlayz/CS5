@@ -14,7 +14,6 @@ public class ActionUI : MonoBehaviour
     public List<Button> actionButtons;
     public List<Button> moveButtons;
     public CombatCtrl combatCtrl;
-    public CharacterUnit characterUnit;
 
     public void EnableActionSelector(bool enabled)
     {
@@ -47,28 +46,34 @@ public class ActionUI : MonoBehaviour
             moveButtons[i].interactable = enabled;
         }
     }
-
+    public void OnGoBackButton()
+    {
+        Debug.Log("Go Back Button");
+        combatCtrl.combatState = CombatState.ACTION;
+        EnableAttackSelector(false);
+        EnableActionSelector(true);
+    }
      public void NewButton(List<Move> moves)
      {
          for(int i = 0; i < moveButtons.Count; ++i)
          {
              if(i < moves.Count)
              {
-//                 if(moves[i].Base.Type == InstrumentType.Music)
+//                 if(moves[i].Base.Type == CharacterType.Hacker)
 //                 {
-//                     moveButtons[i].image.sprite = musicButton;
+//                     moveButtons[i].image.sprite = hackerButton;
 //                 }
-//                 else if(moves[i].Base.Type == InstrumentType.Brass)
+//                 else if(moves[i].Base.Type == CharacterType.Data_Structurer)
 //                 {
-//                     moveButtons[i].image.sprite = brassButton;
+//                     moveButtons[i].image.sprite = dsButton;
 //                 }
-//                 else if(moves[i].Base.Type == InstrumentType.Woodwind)
+//                 else if(moves[i].Base.Type == CharacterType.Debugger)
 //                 {
-//                     moveButtons[i].image.sprite = woodwindButton;
+//                     moveButtons[i].image.sprite = debuggerButton;
 //                 }
-//                 else if(moves[i].Base.Type == InstrumentType.Percussion)
+//                 else if(moves[i].Base.Type == CharacterType.IT_Support)
 //                 {
-//                     moveButtons[i].image.sprite = percButton;
+//                     moveButtons[i].image.sprite = itsButton;
 //                 }
                  moveTexts[i].text = moves[i].Base.Name;
              }

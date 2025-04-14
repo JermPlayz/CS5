@@ -8,6 +8,7 @@ public enum CombatState {SELECTOR, MOVEMENT, ACTION, ATTACKS, COMBAT}
 public class CombatCtrl : MonoBehaviour
 {
     public Character1Ctrl character1Ctrl;
+    public CharacterUnit characterUnit;
     public Camera worldCamera;
     public CombatState combatState;
     [SerializeField] public Tilemap tileMap;
@@ -18,6 +19,7 @@ public class CombatCtrl : MonoBehaviour
     private void Start()
     {
         actionUI.EnableActionSelector(false);
+        actionUI.EnableAttackSelector(false);
         combatState = CombatState.SELECTOR;
     }
 
@@ -69,7 +71,8 @@ public class CombatCtrl : MonoBehaviour
 
         if(combatState == CombatState.ATTACKS)
         {
-            Debug.Log(chosenCharacter.collider.name);
+            characterUnit.Setup();
+            actionUI.NewButton(characterUnit.Character.Moves);
         }
     }
     
