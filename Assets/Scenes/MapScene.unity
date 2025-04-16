@@ -5128,8 +5128,12 @@ MonoBehaviour:
     Volume: 0
     Source: {fileID: 0}
   - Type: 4
-    Clip: {fileID: 0}
-    Volume: 0
+    Clip: {fileID: 8300000, guid: e27afb9a055f465438093fb9f4ec8265, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 5
+    Clip: {fileID: 8300000, guid: 6f1161d95cc8db24591d6570ec8d0cdb, type: 3}
+    Volume: 1
     Source: {fileID: 0}
   SelectedSound: 0
 --- !u!4 &1739387207
@@ -6063,6 +6067,7 @@ MonoBehaviour:
   worldCamera: {fileID: 1093738125}
   combatState: 0
   tileMap: {fileID: 103660489}
+  ptpos: {x: 0, y: 0, z: 0}
   actionUI: {fileID: 1190310135}
 --- !u!4 &2136189902
 Transform:
