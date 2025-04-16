@@ -12,6 +12,7 @@ public class CombatCtrl : MonoBehaviour
     public Camera worldCamera;
     public CombatState combatState;
     [SerializeField] public Tilemap tileMap;
+    public Vector3Int ptpos;
     Vector2 worldPoint;
     RaycastHit2D hit;
     RaycastHit2D chosenCharacter;
@@ -21,6 +22,7 @@ public class CombatCtrl : MonoBehaviour
         actionUI.EnableActionSelector(false);
         actionUI.EnableAttackSelector(false);
         combatState = CombatState.SELECTOR;
+        ptpos = new Vector3Int(-6, 0, 0);
     }
 
     // Update is called once per frame
@@ -46,21 +48,22 @@ public class CombatCtrl : MonoBehaviour
 
         if(combatState == CombatState.MOVEMENT)
         {
-            StartCoroutine(waitasecond());
             if (Input.GetMouseButtonDown(0))
             {
                 hit = Physics2D.Raycast(worldPoint, Vector2.down);
                 Debug.Log(hit);
 
-                //if (hit.collider != null)
-                //{
-                    var tpos = tileMap.WorldToCell(worldPoint);
-                    Debug.Log(tpos);
-                    var tile = tileMap.GetTile(tpos);
-                    Debug.Log(tile);
-                    combatState = CombatState.ACTION;
-                //}
+                var tpos = tileMap.WorldToCell(worldPoint);
+                Debug.Log(tpos);
+                var tile = tileMap.GetTile(tpos);
+                Debug.Log(tile);
+
+                if(tpos != ptpos)
+                {
+                    ptpos = tpos;
+                }
                 
+                combatState = CombatState.ACTION;
             }
             
         }
