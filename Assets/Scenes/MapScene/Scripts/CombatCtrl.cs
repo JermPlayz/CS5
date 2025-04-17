@@ -12,7 +12,8 @@ public class CombatCtrl : MonoBehaviour
     public Camera worldCamera;
     public CombatState combatState;
     [SerializeField] public Tilemap tileMap;
-    public Vector3Int ptpos;
+    public Vector3 ptpos;
+    public GameObject player1;
     Vector2 worldPoint;
     RaycastHit2D hit;
     RaycastHit2D chosenCharacter;
@@ -53,17 +54,20 @@ public class CombatCtrl : MonoBehaviour
                 hit = Physics2D.Raycast(worldPoint, Vector2.down);
                 Debug.Log(hit);
 
-                var tpos = tileMap.WorldToCell(worldPoint);
+                Vector3Int tpos = tileMap.WorldToCell(worldPoint);
                 Debug.Log(tpos);
                 var tile = tileMap.GetTile(tpos);
                 Debug.Log(tile);
 
                 if(tpos != ptpos)
                 {
-                    ptpos = tpos;
+                    ptpos = (Vector3)tpos * 1.25f;
+                    ptpos = new Vector3(ptpos.x + .65f, ptpos.y + .62f, ptpos.z);
+                    player1.transform.position = ptpos;
+                    Debug.Log(ptpos);
+                    combatState = CombatState.ACTION;
                 }
                 
-                combatState = CombatState.ACTION;
             }
             
         }
