@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public enum CombatState {SELECTOR, MOVEMENT, ACTION, ATTACKS, COMBAT}
+public enum CombatState {SELECTOR, MOVEMENT, ACTION, ATTACKS, COMBAT, ENEMYTURN}
 
 public class CombatCtrl : MonoBehaviour
 {
@@ -13,13 +13,15 @@ public class CombatCtrl : MonoBehaviour
     public Camera worldCamera;
     public CombatState combatState;
     [SerializeField] public Tilemap tileMap;
-    public Vector3 ptpos;
+    public Vector3 ptpos; //player tile position
+    public Vector3 etpos; //enemy
     public GameObject player1;
     Vector2 worldPoint;
     RaycastHit2D hit;
     RaycastHit2D chosenCharacter;
     public ActionUI actionUI;
     public int movementconstraint;
+    public ArrayList<Enemy> Enemylist;
     private void Start()
     {
         actionUI.EnableActionSelector(false);
@@ -87,6 +89,16 @@ public class CombatCtrl : MonoBehaviour
         {
             characterUnit.Setup();
             actionUI.NewButton(characterUnit.Character.Moves);
+        }
+
+        if(combatState = CombatState.ENEMYTURN)
+        {
+            foreach(Enemy enemy in Enemylist)
+            {
+                
+                enemy.UpdatePos(arrpoint);
+            }
+            combatState = CombatState.SELECTOR;
         }
     }
     
