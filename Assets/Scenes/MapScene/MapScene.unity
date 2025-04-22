@@ -3631,6 +3631,7 @@ Canvas:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &387705230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3874,6 +3875,8 @@ Transform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 >>>>>>> 8f28664e27321ad133fda8174f6a8252936b5cd7
+=======
+>>>>>>> parent of 6a3b350 (Trying to make an enemy)
 =======
 >>>>>>> parent of 6a3b350 (Trying to make an enemy)
 =======
