@@ -11,6 +11,7 @@ public class ActionUI : MonoBehaviour
     public GameObject actionSelector;
     public GameObject attackSelector;
     public GameObject useSelector;
+    public GameObject enemySelector;
     public List<Text> moveTexts;
     public List<Text> statTexts;
     public List<Button> actionButtons;
@@ -76,7 +77,6 @@ public class ActionUI : MonoBehaviour
     public void OnMove1Button()
     {
         Debug.Log("Move 1 Button");
-        //combatCtrl.combatState = CombatState.STATS;
         statTexts[0].text = $"{characterUnit.Character.Moves[0].Base.Power}";
         statTexts[1].text = $"{characterUnit.Character.Moves[0].Base.Accuracy}";
         statTexts[2].text = $"{characterUnit.Character.Moves[0].Base.PP}";
@@ -86,15 +86,45 @@ public class ActionUI : MonoBehaviour
     public void OnMove2Button()
     {
         Debug.Log("Move 2 Button");
-        //combatCtrl.combatState = CombatState.STATS;
         statTexts[0].text = $"{characterUnit.Character.Moves[1].Base.Power}";
         statTexts[1].text = $"{characterUnit.Character.Moves[1].Base.Accuracy}";
         statTexts[2].text = $"{characterUnit.Character.Moves[1].Base.PP}";
         statTexts[3].text = $"{characterUnit.Character.Moves[1].Base.Range}";
         EnableUseSelector(true);
     }
+    public void OnMove3Button()
+    {
+        Debug.Log("Move 3 Button");
+        statTexts[0].text = $"{characterUnit.Character.Moves[2].Base.Power}";
+        statTexts[1].text = $"{characterUnit.Character.Moves[2].Base.Accuracy}";
+        statTexts[2].text = $"{characterUnit.Character.Moves[2].Base.PP}";
+        statTexts[3].text = $"{characterUnit.Character.Moves[2].Base.Range}";
+        EnableUseSelector(true);
+    }
+    public void OnMove4Button()
+    {
+        Debug.Log("Move 4 Button");
+        statTexts[0].text = $"{characterUnit.Character.Moves[3].Base.Power}";
+        statTexts[1].text = $"{characterUnit.Character.Moves[3].Base.Accuracy}";
+        statTexts[2].text = $"{characterUnit.Character.Moves[3].Base.PP}";
+        statTexts[3].text = $"{characterUnit.Character.Moves[3].Base.Range}";
+        EnableUseSelector(true);
+    }
     public void EnableUseSelector(bool enabled)
     {
         useSelector.SetActive(enabled);
+        //combatCtrl.combatState = CombatState.STATS;
+    }
+    public void OnUseButton()
+    {
+        Debug.Log("Use Button");
+        EnableAttackSelector(false);
+        EnableUseSelector(false);
+        EnableEnemySelector(true);
+    }
+    public void EnableEnemySelector(bool enabled)
+    {
+        enemySelector.SetActive(enabled);
+        //combatCtrl.combatState = CombatState.STATS;
     }
 }
