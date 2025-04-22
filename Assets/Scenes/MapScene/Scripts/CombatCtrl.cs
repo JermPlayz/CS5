@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -18,12 +19,14 @@ public class CombatCtrl : MonoBehaviour
     RaycastHit2D hit;
     RaycastHit2D chosenCharacter;
     public ActionUI actionUI;
+    public int movementconstraint;
     private void Start()
     {
         actionUI.EnableActionSelector(false);
         actionUI.EnableAttackSelector(false);
         combatState = CombatState.SELECTOR;
         ptpos = new Vector3Int(-6, 0, 0);
+        movementconstraint = 4;
     }
 
     // Update is called once per frame
@@ -61,11 +64,15 @@ public class CombatCtrl : MonoBehaviour
 
                 if(tpos != ptpos)
                 {
-                    ptpos = (Vector3)tpos * 1.25f;
-                    ptpos = new Vector3(ptpos.x + .65f, ptpos.y + .62f, ptpos.z);
-                    player1.transform.position = ptpos;
-                    Debug.Log(ptpos);
-                    combatState = CombatState.ACTION;
+                    if(Math.Abs(tpos.x - ptpos.x) <= movementconstraint && Math.Abs(tpos.y - ptpos.y) <= movementconstraint)
+                    {
+                        ptpos = (Vector3)tpos * 1.25f;
+                        ptpos = new Vector3(ptpos.x + .65f, ptpos.y + .62f, ptpos.z);
+                        player1.transform.position = ptpos;
+                        Debug.Log(ptpos);
+                        ptpos = tpos;
+                        combatState = CombatState.ACTION;
+                    }
                 }
                 
             }
