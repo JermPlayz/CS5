@@ -10,14 +10,14 @@ public class ActionUI : MonoBehaviour
     public Sprite noButton;
     public GameObject actionSelector;
     public GameObject attackSelector;
+<<<<<<< HEAD
     public GameObject useSelector;
     public GameObject enemySelector;
+=======
+>>>>>>> parent of 8f28664 (Shows stats)
     public List<Text> moveTexts;
-    public List<Text> statTexts;
     public List<Button> actionButtons;
     public List<Button> moveButtons;
-    public Button useButton;
-    public CharacterUnit characterUnit;
     public CombatCtrl combatCtrl;
 
     public void EnableActionSelector(bool enabled)
@@ -56,9 +56,9 @@ public class ActionUI : MonoBehaviour
         Debug.Log("Go Back Button");
         combatCtrl.combatState = CombatState.ACTION;
         EnableAttackSelector(false);
-        EnableUseSelector(false);
         EnableActionSelector(true);
     }
+<<<<<<< HEAD
     public void NewButton(List<Move> moves)
     {
         for(int i = 0; i < moveButtons.Count; ++i)
@@ -126,5 +126,37 @@ public class ActionUI : MonoBehaviour
     {
         enemySelector.SetActive(enabled);
         //combatCtrl.combatState = CombatState.STATS;
+=======
+     public void NewButton(List<Move> moves)
+     {
+         for(int i = 0; i < moveButtons.Count; ++i)
+         {
+             if(i < moves.Count)
+             {
+//                 if(moves[i].Base.Type == CharacterType.Hacker)
+//                 {
+//                     moveButtons[i].image.sprite = hackerButton;
+//                 }
+//                 else if(moves[i].Base.Type == CharacterType.Data_Structurer)
+//                 {
+//                     moveButtons[i].image.sprite = dsButton;
+//                 }
+//                 else if(moves[i].Base.Type == CharacterType.Debugger)
+//                 {
+//                     moveButtons[i].image.sprite = debuggerButton;
+//                 }
+//                 else if(moves[i].Base.Type == CharacterType.IT_Support)
+//                 {
+//                     moveButtons[i].image.sprite = itsButton;
+//                 }
+                 moveTexts[i].text = moves[i].Base.Name;
+             }
+             else
+             {
+                 moveButtons[i].image.sprite = noButton;
+                 moveButtons[i].interactable = false;
+             }
+         }
+>>>>>>> parent of 8f28664 (Shows stats)
     }
 }
