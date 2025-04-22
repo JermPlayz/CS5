@@ -3629,6 +3629,7 @@ Canvas:
   m_SortingOrder: 0
   m_TargetDisplay: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &387705230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3872,6 +3873,8 @@ Transform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 >>>>>>> 8f28664e27321ad133fda8174f6a8252936b5cd7
+=======
+>>>>>>> parent of 6a3b350 (Trying to make an enemy)
 --- !u!1 &520293485
 GameObject:
   m_ObjectHideFlags: 0
@@ -9258,7 +9261,6 @@ MonoBehaviour:
   ptpos: {x: 0, y: 0, z: 0}
   player1: {fileID: 1687008496}
   actionUI: {fileID: 1190310135}
-  movementconstraint: 0
 --- !u!4 &2136189902
 Transform:
   m_ObjectHideFlags: 0
@@ -9285,4 +9287,3 @@ SceneRoots:
   - {fileID: 1466829045}
   - {fileID: 1600558077}
   - {fileID: 194070247}
-  - {fileID: 455963878}
