@@ -10,14 +10,14 @@ public class ActionUI : MonoBehaviour
     public Sprite noButton;
     public GameObject actionSelector;
     public GameObject attackSelector;
-<<<<<<< HEAD
     public GameObject useSelector;
     public GameObject enemySelector;
-=======
->>>>>>> parent of 8f28664 (Shows stats)
     public List<Text> moveTexts;
+    public List<Text> statTexts;
     public List<Button> actionButtons;
     public List<Button> moveButtons;
+    public Button useButton;
+    public CharacterUnit characterUnit;
     public CombatCtrl combatCtrl;
 
     public void EnableActionSelector(bool enabled)
@@ -56,6 +56,7 @@ public class ActionUI : MonoBehaviour
         Debug.Log("Go Back Button");
         combatCtrl.combatState = CombatState.ACTION;
         EnableAttackSelector(false);
+        EnableUseSelector(false);
         EnableActionSelector(true);
     }
     public void NewButton(List<Move> moves)
@@ -124,6 +125,6 @@ public class ActionUI : MonoBehaviour
     public void EnableEnemySelector(bool enabled)
     {
         enemySelector.SetActive(enabled);
-        //combatCtrl.combatState = CombatState.STATS;
+        //combatCtrl.combatState = CombatState.ENEMYSELECT;
     }
 }
