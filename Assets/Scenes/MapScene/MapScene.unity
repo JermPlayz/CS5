@@ -2980,7 +2980,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
-<<<<<<< HEAD
 --- !u!1 &193714162
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,8 +3180,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194056335}
   m_CullTransparentMesh: 1
-=======
->>>>>>> parent of 8f28664 (Shows stats)
 --- !u!1 &194070245
 GameObject:
   m_ObjectHideFlags: 0
@@ -3631,11 +3628,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1 &387705230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,13 +3719,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387705230}
   m_CullTransparentMesh: 1
-=======
-<<<<<<< HEAD
---- !u!1 &455963874
-=======
->>>>>>> efbe0e84e3a2706584d3f4129c092b400be96931
---- !u!1 &518006037
->>>>>>> 8f28664e27321ad133fda8174f6a8252936b5cd7
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3741,36 +3726,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 455963878}
   - component: {fileID: 455963877}
   - component: {fileID: 455963876}
   - component: {fileID: 455963875}
   m_Layer: 0
   m_Name: Enemy1
-=======
-  - component: {fileID: 518006038}
-  m_Layer: 5
-  m_Name: Use
->>>>>>> 8f28664e27321ad133fda8174f6a8252936b5cd7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-<<<<<<< HEAD
   m_IsActive: 1
 --- !u!114 &455963875
 MonoBehaviour:
-=======
-  m_IsActive: 0
---- !u!224 &518006038
-RectTransform:
->>>>>>> 8f28664e27321ad133fda8174f6a8252936b5cd7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 455963874}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3863,30 +3835,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
-  m_GameObject: {fileID: 518006037}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1422905020}
-  m_Father: {fileID: 551620965}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> 8f28664e27321ad133fda8174f6a8252936b5cd7
-=======
->>>>>>> parent of 6a3b350 (Trying to make an enemy)
-=======
->>>>>>> parent of 6a3b350 (Trying to make an enemy)
-=======
->>>>>>> parent of 6a3b350 (Trying to make an enemy)
-=======
->>>>>>> parent of 8f28664 (Shows stats)
 --- !u!1 &520293485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5733,11 +5681,8 @@ MonoBehaviour:
   noButton: {fileID: 8995154407686431259, guid: 663a674f5fbb73f4f909f72e21eaedd6, type: 3}
   actionSelector: {fileID: 371259589}
   attackSelector: {fileID: 188453669}
-<<<<<<< HEAD
   useSelector: {fileID: 518006037}
   enemySelector: {fileID: 387705230}
-=======
->>>>>>> parent of 8f28664 (Shows stats)
   moveTexts:
   - {fileID: 1772161001}
   - {fileID: 1633232157}
@@ -6080,7 +6025,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304299407}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
 --- !u!1 &1351294768
 GameObject:
   m_ObjectHideFlags: 0
@@ -6293,8 +6237,6 @@ RectTransform:
   m_AnchoredPosition: {x: 32.3, y: 43.607}
   m_SizeDelta: {x: 64.7831, y: 25.6475}
   m_Pivot: {x: 0.5, y: 0.5}
-=======
->>>>>>> parent of 8f28664 (Shows stats)
 --- !u!1 &1431932378
 GameObject:
   m_ObjectHideFlags: 0
