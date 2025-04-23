@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 989d0e55392f0d049b23fc008b53637a
+  - enabled: 1
+    path: Assets/Scenes/Story 1.unity
+    guid: 3a596ed7dc24dfd41b623d81cc4b1a8d
+  - enabled: 1
+    path: Assets/Scenes/TryMenu.unity
+    guid: 46334b268842e6741b9197844ad85a8c
+  - enabled: 1
+    path: Assets/Scenes/MapScene/MapScene.unity
+    guid: 2ea1607d3e1b403418e2d8c234e7d043
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

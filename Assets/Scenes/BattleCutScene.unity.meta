@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/BattleCutScene.unity.meta
 guid: 36f60576e54b1bc41b69923f4446e642
+========
+guid: 84e12236723a2ec4089828ee90117f82
+>>>>>>>> a143871f728cb3fa9d3734d54693ae505a230663:Assets/Scenes/L1_P2.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
