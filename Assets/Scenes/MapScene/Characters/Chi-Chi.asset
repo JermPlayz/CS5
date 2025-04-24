@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Chi-Chi
   m_EditorClassIdentifier: 
   name: 
-  description: 
-  type1: 0
-  maxHP: 0
-  attack: 0
-  defense: 0
-  spAttack: 0
-  spDefense: 0
-  speed: 0
-  expYield: 0
+  description: IT attack!
+  type1: 4
+  maxHP: 10
+  attack: 10
+  defense: 10
+  spAttack: 10
+  spDefense: 10
+  speed: 10
+  expYield: 10
   growthRate: 0
   learnableMoves: []
