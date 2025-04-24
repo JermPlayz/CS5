@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public enum CombatState {SELECTOR, MOVEMENT, ACTION, ATTACKS, COMBAT, ENEMYTURN}
+public enum CombatState {SELECTOR, MOVEMENT, ACTION, ATTACKS, ENEMYSELECTOR, COMBAT, ENEMYTURN}
 
 public class CombatCtrl : MonoBehaviour
 {
@@ -91,13 +91,23 @@ public class CombatCtrl : MonoBehaviour
             actionUI.NewButton(characterUnit.Character.Moves);
         }
 
+        if(combatState == CombatState.ENEMYSELECTOR)
+        {
+
+        }
+
         if(combatState == CombatState.ENEMYTURN)
         {
             foreach(Enemy enemy in Enemylist)
             {
                 int r = Random.Range(0, enemy.Moves.Count);
+                arrpoint = enemy.closestplayer + (new Vector3(enemy.Moves[r].Range, 0, 0));
+                //if(Math.Abs(arrpoint.x - enemy.Getpos().x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.Getpos().y) <= enemy.moveconstraint)
+                //{ uncomment after alpha
+                    enemy.UpdatePos(arrpoint);
+                //}
                 
-                enemy.UpdatePos(arrpoint);
+                
             }
             combatState = CombatState.SELECTOR;
         }
