@@ -588,6 +588,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4656298143137325205, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: Base
+      value: 
+      objectReference: {fileID: 11400000, guid: d231d67df9c124c4286d440040b19a9e, type: 2}
+    - target: {fileID: 4656298143137325205, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656298143137325205, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 1687008496}
     - target: {fileID: 7293847573167466331, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
       propertyPath: m_Name
       value: Enemy
