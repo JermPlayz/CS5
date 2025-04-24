@@ -8,7 +8,10 @@ public class Enemy : MonoBehaviour
 
     public Vector3 pos;
     public List<Move> Moves;
+    public List<GameObject> players;
     public Vector3 closestplayer; 
+    public GameObject player1; //remove after alpha
+    public int moveconstraint;
     void Start()
     {
         Moves = new List<Move>();
@@ -20,16 +23,23 @@ public class Enemy : MonoBehaviour
             if(Moves.Count >= 4)
                 break;
         }
+        //remove after alpha
+        closestplayer = player1.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //foreach(GameObject player in players)
     }
 
     public void UpdatePos(Vector3 newpos)
     {
         pos = newpos;
+    }
+
+    public Vector3 Getpos()
+    {
+        return(pos);
     }
 }

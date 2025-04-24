@@ -95,7 +95,7 @@ public class CombatCtrl : MonoBehaviour
         {
             foreach(Enemy enemy in Enemylist)
             {
-                int r = Random.Range(0, Moves.Count);
+                int r = Random.Range(0, enemy.Moves.Count);
                 
                 enemy.UpdatePos(arrpoint);
             }
