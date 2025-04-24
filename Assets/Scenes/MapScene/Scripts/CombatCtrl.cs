@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public enum CombatState {SELECTOR, MOVEMENT, ACTION, ATTACKS, ENEMYSELECTOR, COMBAT, ENEMYTURN}
 
@@ -22,6 +23,8 @@ public class CombatCtrl : MonoBehaviour
     public ActionUI actionUI;
     public int movementconstraint;
     public List<Enemy> Enemylist;
+    public GameObject combatCutscene;
+
     private void Start()
     {
         actionUI.EnableActionSelector(false);
@@ -29,6 +32,9 @@ public class CombatCtrl : MonoBehaviour
         combatState = CombatState.SELECTOR;
         ptpos = new Vector3Int(-6, 0, 0);
         movementconstraint = 4;
+        AudioManager.Instance.ChangeMusic1(AudioManager.SoundType.Music_Battle_Rain);
+        AudioManager.Instance.ChangeMusic2(AudioManager.SoundType.Music_Battle_Thunder);
+        AudioManager.Instance.MuteMusic2();
     }
 
     // Update is called once per frame
@@ -106,10 +112,12 @@ public class CombatCtrl : MonoBehaviour
                 combatState = CombatState.COMBAT;
             }
         }
-
         if(combatState == CombatState.COMBAT)
         {
-            
+            var move = characterUnit.Character.Moves[actionUI.CurrentMove()];
+            EnableCombatCutscene(true);
+            AudioManager.Instance.MuteMusic1();
+            AudioManager.Instance.UnmuteMusic2();
         }
 
         if(combatState == CombatState.ENEMYTURN)
@@ -128,7 +136,10 @@ public class CombatCtrl : MonoBehaviour
             combatState = CombatState.SELECTOR;
         }
     }
-    
+    public void EnableCombatCutscene(bool enabled)
+    {
+        combatCutscene.SetActive(enabled);
+    }
     IEnumerator waitasecond()
     {
         yield return new WaitForSeconds(1);

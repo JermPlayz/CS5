@@ -118,7 +118,6 @@ public class ActionUI : MonoBehaviour
     public void EnableUseSelector(bool enabled)
     {
         useSelector.SetActive(enabled);
-        //combatCtrl.combatState = CombatState.STATS;
     }
     public void OnUseButton()
     {
