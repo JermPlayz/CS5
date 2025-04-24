@@ -116,8 +116,8 @@ public class CombatCtrl : MonoBehaviour
         {
             var move = characterUnit.Character.Moves[actionUI.CurrentMove()];
             EnableCombatCutscene(true);
-            AudioManager.Instance.MuteMusic1();
-            AudioManager.Instance.UnmuteMusic2();
+            // StartCoroutine(waitasecond());
+            // EnableCombatCutscene(false);
         }
 
         if(combatState == CombatState.ENEMYTURN)
@@ -139,6 +139,16 @@ public class CombatCtrl : MonoBehaviour
     public void EnableCombatCutscene(bool enabled)
     {
         combatCutscene.SetActive(enabled);
+        if(enabled == true)
+        {
+            AudioManager.Instance.MuteMusic1();
+            AudioManager.Instance.UnmuteMusic2();
+        }
+        else
+        {
+            AudioManager.Instance.MuteMusic2();
+            AudioManager.Instance.UnmuteMusic1();
+        }
     }
     IEnumerator waitasecond()
     {
