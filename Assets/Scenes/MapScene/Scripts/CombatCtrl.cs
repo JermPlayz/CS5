@@ -100,8 +100,8 @@ public class CombatCtrl : MonoBehaviour
         {
             foreach(Enemy enemy in Enemylist)
             {
-                int r = Random.Range(0, enemy.Moves.Count);
-                arrpoint = enemy.closestplayer + (new Vector3(enemy.Moves[r].Range, 0, 0));
+                int r = UnityEngine.Random.Range(0, enemy.Moves.Count);
+                Vector3 arrpoint = enemy.closestplayer + (new Vector3(enemy.Moves[r].Range, 0, 0));
                 //if(Math.Abs(arrpoint.x - enemy.Getpos().x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.Getpos().y) <= enemy.moveconstraint)
                 //{ uncomment after alpha
                     enemy.UpdatePos(arrpoint);

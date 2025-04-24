@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    
     public Vector3 pos;
     public List<Move> Moves;
     public List<GameObject> players;
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
         }
         //remove after alpha
         closestplayer = player1.transform.position;
+        pos = new Vector3Int(1, 0, 0);
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour
 
     public void UpdatePos(Vector3 newpos)
     {
+        transform.position = newpos;
         pos = newpos;
     }
 
