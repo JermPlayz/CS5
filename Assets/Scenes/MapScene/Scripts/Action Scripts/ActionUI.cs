@@ -130,7 +130,7 @@ public class ActionUI : MonoBehaviour
     public void EnableEnemySelector(bool enabled)
     {
         enemySelector.SetActive(enabled);
-        //combatCtrl.combatState = CombatState.ENEMYSELECT;
+        combatCtrl.combatState = CombatState.ENEMYSELECTOR;
     }
     public int CurrentMove()
     {

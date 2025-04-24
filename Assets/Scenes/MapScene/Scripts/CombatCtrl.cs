@@ -14,7 +14,7 @@ public class CombatCtrl : MonoBehaviour
     public CombatState combatState;
     [SerializeField] public Tilemap tileMap;
     public Vector3 ptpos; //player tile position
-    public Vector3 etpos; //enemy
+    public Vector3 etpos; //enemy, delete after alpha
     public GameObject player1;
     Vector2 worldPoint;
     RaycastHit2D hit;
@@ -89,9 +89,25 @@ public class CombatCtrl : MonoBehaviour
         {
             characterUnit.Setup();
             actionUI.NewButton(characterUnit.Character.Moves);
+
         }
 
         if(combatState == CombatState.ENEMYSELECTOR)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                hit = Physics2D.Raycast(worldPoint, Vector2.down);
+                Debug.Log(hit.collider.name);
+
+                /*Vector3Int tpos = tileMap.WorldToCell(worldPoint);
+                Debug.Log(tpos);
+                var tile = tileMap.GetTile(tpos);
+                Debug.Log(tile);*/
+                combatState = CombatState.COMBAT;
+            }
+        }
+
+        if(combatState == CombatState.COMBAT)
         {
             
         }
