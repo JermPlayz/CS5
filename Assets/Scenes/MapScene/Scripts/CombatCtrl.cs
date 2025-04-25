@@ -118,6 +118,7 @@ public class CombatCtrl : MonoBehaviour
             EnableCombatCutscene(true);
             // StartCoroutine(waitasecond());
             // EnableCombatCutscene(false);
+
         }
 
         if(combatState == CombatState.ENEMYTURN)
@@ -125,12 +126,12 @@ public class CombatCtrl : MonoBehaviour
             foreach(Enemy enemy in Enemylist)
             {
                 int r = UnityEngine.Random.Range(0, enemy.Moves.Count);
-                Vector3 arrpoint = enemy.closestplayer + (new Vector3(enemy.Moves[r].Base.Range, 0, 0));
+                Vector3 arrpoint = enemy.closestplayer.transform.position + (new Vector3(enemy.Moves[r].Base.Range, 0, 0));
                 //if(Math.Abs(arrpoint.x - enemy.Getpos().x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.Getpos().y) <= enemy.moveconstraint)
                 //{ uncomment after alpha
                     enemy.UpdatePos(arrpoint);
+                    Enemyattacks(enemy.Moves[r], enemy.closestplayer);
                 //}
-                
                 
             }
             combatState = CombatState.SELECTOR;
@@ -153,5 +154,10 @@ public class CombatCtrl : MonoBehaviour
     IEnumerator waitasecond()
     {
         yield return new WaitForSeconds(1);
+    }
+
+    public void Enemyattacks(Move move, GameObject player)
+    {
+
     }
 }

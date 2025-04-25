@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public Vector3 pos;
     public List<Move> Moves;
     public List<GameObject> players;
-    public Vector3 closestplayer; 
+    public GameObject closestplayer; 
     public GameObject player1; //remove after alpha
     public int moveconstraint;
     void Start()
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
                 break;
         }
         //remove after alpha
-        closestplayer = player1.transform.position;
+        closestplayer = player1;
         pos = new Vector3Int(1, 0, 0);
         moveconstraint = 5;
     }
@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         //foreach(GameObject player in players)
+        closestplayer = player1;
     }
 
     public void UpdatePos(Vector3 newpos)
