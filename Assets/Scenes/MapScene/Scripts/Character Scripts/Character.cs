@@ -42,7 +42,7 @@ public class Character
         Exp = Base.GetExpForLevel(Level);
 
         CalculateStats();
-        HP = MaxHP;
+        HP = MaxHP; //make a current HP vs Max HP
 
         ResetStatBoost();
     }
