@@ -19,6 +19,7 @@ public class ActionUI : MonoBehaviour
     public Button useButton;
     public CharacterUnit characterUnit;
     public CombatCtrl combatCtrl;
+    public int currentMove;
 
     public void EnableActionSelector(bool enabled)
     {
@@ -80,6 +81,7 @@ public class ActionUI : MonoBehaviour
     public void OnMove1Button()
     {
         Debug.Log("Move 1 Button");
+        currentMove = 0;
         statTexts[0].text = $"{characterUnit.Character.Moves[0].Base.Power}";
         statTexts[1].text = $"{characterUnit.Character.Moves[0].Base.Accuracy}";
         statTexts[2].text = $"{characterUnit.Character.Moves[0].Base.PP}";
@@ -116,7 +118,6 @@ public class ActionUI : MonoBehaviour
     public void EnableUseSelector(bool enabled)
     {
         useSelector.SetActive(enabled);
-        //combatCtrl.combatState = CombatState.STATS;
     }
     public void OnUseButton()
     {
@@ -128,6 +129,10 @@ public class ActionUI : MonoBehaviour
     public void EnableEnemySelector(bool enabled)
     {
         enemySelector.SetActive(enabled);
-        //combatCtrl.combatState = CombatState.ENEMYSELECT;
+        combatCtrl.combatState = CombatState.ENEMYSELECTOR;
+    }
+    public int CurrentMove()
+    {
+        return currentMove;
     }
 }

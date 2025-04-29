@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jeremy
   m_EditorClassIdentifier: 
   name: Jeremy
-  description: Character 1
+  description: Hack Attacker
   type1: 1
   maxHP: 10
   attack: 10
