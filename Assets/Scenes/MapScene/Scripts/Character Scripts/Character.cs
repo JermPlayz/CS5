@@ -12,8 +12,10 @@ public class Character
     public int Exp{get; set;}
 
     public int HP{get; set;}
+    public int CurrentHP{get; set;}
 
     public List<Move> Moves {get; set;}
+    public bool isDeclared{get; set;}
 
     public Dictionary<Stat, int> Stats {get; private set;}
     public Dictionary<Stat, int> StatBoosts {get; private set;}
@@ -42,7 +44,12 @@ public class Character
         Exp = Base.GetExpForLevel(Level);
 
         CalculateStats();
-        HP = MaxHP;
+        if(!isDeclared)
+        {
+            CurrentHP = MaxHP;
+            isDeclared = true;
+        }
+        HP = CurrentHP; //make a current HP vs Max HP
 
         ResetStatBoost();
     }
@@ -147,6 +154,7 @@ public class Character
         int damage = Mathf.FloorToInt(d * modifiers);
 
         HP -= damage;
+        CurrentHP = HP;
         if(HP <= 0)
         {
             HP = 0;

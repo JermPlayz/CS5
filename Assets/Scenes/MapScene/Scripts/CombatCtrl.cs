@@ -11,6 +11,7 @@ public class CombatCtrl : MonoBehaviour
 {
     public Character1Ctrl character1Ctrl;
     public CharacterUnit characterUnit;
+    public CharacterUnit enemyUnit;
     public Camera worldCamera;
     public CombatState combatState;
     [SerializeField] public Tilemap tileMap;
@@ -24,11 +25,20 @@ public class CombatCtrl : MonoBehaviour
     public int movementconstraint;
     public List<Enemy> Enemylist;
     public GameObject combatCutscene;
-
+    public GameObject viewPlayerHud;
+    public GameObject viewEnemyHud;
+    public BattleHud playerHud;
+    public BattleHud enemyHud;
+    public Animator characterAnimator;
+    public Animator enemyAnimator;
     private void Start()
     {
         actionUI.EnableActionSelector(false);
         actionUI.EnableAttackSelector(false);
+        actionUI.EnableUseSelector(false);
+        actionUI.EnableInitiateAttackSelector(false);
+        viewPlayerHud.SetActive(false);
+        viewEnemyHud.SetActive(false);
         combatState = CombatState.SELECTOR;
         ptpos = new Vector3Int(-6, 0, 0);
         movementconstraint = 4;
@@ -44,6 +54,12 @@ public class CombatCtrl : MonoBehaviour
 
         if(combatState == CombatState.SELECTOR)
         {
+            actionUI.EnableActionSelector(false);
+            actionUI.EnableAttackSelector(false);
+            actionUI.EnableUseSelector(false);
+            actionUI.EnableInitiateAttackSelector(false);
+            viewPlayerHud.SetActive(false);
+            viewEnemyHud.SetActive(false);
             if(Input.GetMouseButtonDown(0))
             {
                 hit = Physics2D.Raycast(worldPoint, Vector2.down);
@@ -79,6 +95,7 @@ public class CombatCtrl : MonoBehaviour
                         player1.transform.position = ptpos;
                         Debug.Log(ptpos);
                         ptpos = tpos;
+                        //characterAnimator.Play("Walk");
                         combatState = CombatState.ACTION;
                     }
                 }
@@ -95,30 +112,30 @@ public class CombatCtrl : MonoBehaviour
         {
             characterUnit.Setup();
             actionUI.NewButton(characterUnit.Character.Moves);
-
         }
 
         if(combatState == CombatState.ENEMYSELECTOR)
         {
+            playerHud.SetHUD(characterUnit);
+            viewPlayerHud.SetActive(true);
             if(Input.GetMouseButtonDown(0))
             {
                 hit = Physics2D.Raycast(worldPoint, Vector2.down);
                 Debug.Log(hit.collider.name);
-
                 /*Vector3Int tpos = tileMap.WorldToCell(worldPoint);
                 Debug.Log(tpos);
                 var tile = tileMap.GetTile(tpos);
                 Debug.Log(tile);*/
-                combatState = CombatState.COMBAT;
+                enemyUnit.Setup();
+                enemyHud.SetHUD(enemyUnit);
+                viewEnemyHud.SetActive(true);
+                actionUI.EnableInitiateAttackSelector(true);
             }
         }
+        
         if(combatState == CombatState.COMBAT)
         {
-            var move = characterUnit.Character.Moves[actionUI.CurrentMove()];
-            EnableCombatCutscene(true);
-            // StartCoroutine(waitasecond());
-            // EnableCombatCutscene(false);
-
+            StartCoroutine(PlayerAttack());
         }
 
         if(combatState == CombatState.ENEMYTURN)
@@ -137,13 +154,17 @@ public class CombatCtrl : MonoBehaviour
             combatState = CombatState.SELECTOR;
         }
     }
-    public void EnableCombatCutscene(bool enabled)
+    IEnumerator EnableCombatCutscene(bool enabled)
     {
-        combatCutscene.SetActive(enabled);
+        //combatCutscene.SetActive(enabled);
         if(enabled == true)
         {
             AudioManager.Instance.MuteMusic1();
             AudioManager.Instance.UnmuteMusic2();
+            yield return new WaitForSeconds(.25f);
+            characterAnimator.Play("Attack");
+            yield return new WaitForSeconds(.575f);
+            characterAnimator.Play("Idle");
         }
         else
         {
@@ -151,9 +172,62 @@ public class CombatCtrl : MonoBehaviour
             AudioManager.Instance.UnmuteMusic1();
         }
     }
+    bool CheckIfMoveHits(Move move, Character source, Character target)
+    {
+        float moveAccuracy = move.Base.Accuracy;
+
+        int accuracy = source.StatBoosts[Stat.Accuracy];
+        int evasion = source.StatBoosts[Stat.Evasion];
+
+        var boostValues = new float[] {1f, 4f / 3f, 5f / 3f, 2f, 7f / 3f, 8f / 3f, 3f};
+
+        if(accuracy > 0)
+            moveAccuracy *= boostValues[accuracy];
+        else
+            moveAccuracy /= boostValues[-accuracy];
+        
+        if(evasion > 0)
+            moveAccuracy /= boostValues[evasion];
+        else
+            moveAccuracy *= boostValues[-evasion];
+
+        return UnityEngine.Random.Range(1, 101) <= moveAccuracy;
+    }
+
+    IEnumerator PlayerAttack()
+    {
+        StartCoroutine(EnableCombatCutscene(true));
+        var move = characterUnit.Character.Moves[actionUI.CurrentMove()];
+        yield return new WaitForSeconds(.5f);
+
+        // if(CheckIfMoveHits(move, characterUnit.Character, enemyUnit.Character))
+        // {
+            bool isDead = enemyUnit.Character.TakeDamage(move, characterUnit.Character);
+            if(isDead)
+            {
+                enemyHud.UpdateHP();
+                enemyAnimator.Play("Dead");
+            }
+            // else
+            // {
+            //     enemyHud.UpdateHP();
+            //     enemyAnimator.Play("Hurt");
+            // }
+        // }
+        // else
+        // {
+        //     enemyAnimator.Play("Shield");
+        // }
+
+        yield return new WaitForSeconds(1f);
+        enemyAnimator.Play("Stay Dead");
+
+        StartCoroutine(EnableCombatCutscene(false));
+        combatState = CombatState.SELECTOR;
+    }
     IEnumerator waitasecond()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1f);
     }
 
     public void Enemyattacks(Move move, GameObject player)

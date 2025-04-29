@@ -11,16 +11,16 @@ public class ActionUI : MonoBehaviour
     public GameObject actionSelector;
     public GameObject attackSelector;
     public GameObject useSelector;
-    public GameObject enemySelector;
+    public GameObject initiateAttackSelector;
     public List<Text> moveTexts;
     public List<Text> statTexts;
     public List<Button> actionButtons;
     public List<Button> moveButtons;
     public Button useButton;
+    public Button attackButton;
     public CharacterUnit characterUnit;
     public CombatCtrl combatCtrl;
     public int currentMove;
-
     public void EnableActionSelector(bool enabled)
     {
         actionSelector.SetActive(enabled);
@@ -124,12 +124,16 @@ public class ActionUI : MonoBehaviour
         Debug.Log("Use Button");
         EnableAttackSelector(false);
         EnableUseSelector(false);
-        EnableEnemySelector(true);
-    }
-    public void EnableEnemySelector(bool enabled)
-    {
-        enemySelector.SetActive(enabled);
         combatCtrl.combatState = CombatState.ENEMYSELECTOR;
+    }
+    public void EnableInitiateAttackSelector(bool enabled)
+    {
+        initiateAttackSelector.SetActive(enabled);
+    }
+    public void OnInitiateAttackButton()
+    {
+        EnableInitiateAttackSelector(false);
+        combatCtrl.combatState = CombatState.COMBAT;
     }
     public int CurrentMove()
     {

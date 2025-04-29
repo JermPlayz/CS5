@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Character", menuName = "Character/Create new character")]
 public class CharacterBase : ScriptableObject
 {
+    [SerializeField] Sprite sprite;
     [SerializeField] string name;
     [TextArea]
     [SerializeField] string description;
@@ -39,6 +40,10 @@ public class CharacterBase : ScriptableObject
         return -1;
     }
 
+    public Sprite Sprite
+    {
+        get{return sprite;}
+    }
     public string Name
     {
         get{return name;}
