@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class ActionUI : MonoBehaviour
 {
     public Sprite actionButton;
@@ -18,7 +18,7 @@ public class ActionUI : MonoBehaviour
     public List<Button> moveButtons;
     public Button useButton;
     public CharacterUnit characterUnit;
-    public CombatCtrl combatCtrl;
+   // public CombatCtrl combatCtrl;
 
     public void EnableActionSelector(bool enabled)
     {
@@ -131,3 +131,4 @@ public class ActionUI : MonoBehaviour
         //combatCtrl.combatState = CombatState.ENEMYSELECT;
     }
 }
+*/

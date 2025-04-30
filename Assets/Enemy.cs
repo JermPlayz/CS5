@@ -1,7 +1,7 @@
 
 using UnityEngine;
 using System.Collections.Generic;
-
+/*
 public class Enemy : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,3 +33,4 @@ public class Enemy : MonoBehaviour
         pos = newpos;
     }
 }
+*/

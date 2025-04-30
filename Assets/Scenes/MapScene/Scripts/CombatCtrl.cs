@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
+/*
 public enum CombatState {SELECTOR, MOVEMENT, ACTION, ATTACKS, COMBAT, ENEMYTURN}
 
 public class CombatCtrl : MonoBehaviour
@@ -108,3 +108,4 @@ public class CombatCtrl : MonoBehaviour
         yield return new WaitForSeconds(1);
     }
 }
+*/
