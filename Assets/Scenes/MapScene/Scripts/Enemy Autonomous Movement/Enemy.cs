@@ -1,14 +1,19 @@
 
 using UnityEngine;
 using System.Collections.Generic;
-/*
+
 public class Enemy : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    [SerializeField] CharacterBase Base;
+    [SerializeField] int Level;
     public Vector3 pos;
     public List<Move> Moves;
-    public Vector3 closestplayer; 
+    public List<GameObject> players;
+    public GameObject closestplayer; 
+    public GameObject player1; //remove after alpha
+    public int moveconstraint;
     void Start()
     {
         Moves = new List<Move>();
@@ -20,17 +25,27 @@ public class Enemy : MonoBehaviour
             if(Moves.Count >= 4)
                 break;
         }
+        //remove after alpha
+        closestplayer = player1;
+        pos = new Vector3Int(1, 0, 0);
+        moveconstraint = 5;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //foreach(GameObject player in players)
+        closestplayer = player1;
     }
 
     public void UpdatePos(Vector3 newpos)
     {
+        transform.position = newpos;
         pos = newpos;
     }
+
+    public Vector3 Getpos()
+    {
+        return(pos);
+    }
 }
-*/

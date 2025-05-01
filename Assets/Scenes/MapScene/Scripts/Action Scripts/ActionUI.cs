@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-/*
+
 public class ActionUI : MonoBehaviour
 {
     public Sprite actionButton;
@@ -11,15 +11,16 @@ public class ActionUI : MonoBehaviour
     public GameObject actionSelector;
     public GameObject attackSelector;
     public GameObject useSelector;
-    public GameObject enemySelector;
+    public GameObject initiateAttackSelector;
     public List<Text> moveTexts;
     public List<Text> statTexts;
     public List<Button> actionButtons;
     public List<Button> moveButtons;
     public Button useButton;
+    public Button attackButton;
     public CharacterUnit characterUnit;
-   // public CombatCtrl combatCtrl;
-
+    public CombatCtrl combatCtrl;
+    public int currentMove;
     public void EnableActionSelector(bool enabled)
     {
         actionSelector.SetActive(enabled);
@@ -80,6 +81,7 @@ public class ActionUI : MonoBehaviour
     public void OnMove1Button()
     {
         Debug.Log("Move 1 Button");
+        currentMove = 0;
         statTexts[0].text = $"{characterUnit.Character.Moves[0].Base.Power}";
         statTexts[1].text = $"{characterUnit.Character.Moves[0].Base.Accuracy}";
         statTexts[2].text = $"{characterUnit.Character.Moves[0].Base.PP}";
@@ -116,19 +118,25 @@ public class ActionUI : MonoBehaviour
     public void EnableUseSelector(bool enabled)
     {
         useSelector.SetActive(enabled);
-        //combatCtrl.combatState = CombatState.STATS;
     }
     public void OnUseButton()
     {
         Debug.Log("Use Button");
         EnableAttackSelector(false);
         EnableUseSelector(false);
-        EnableEnemySelector(true);
+        combatCtrl.combatState = CombatState.ENEMYSELECTOR;
     }
-    public void EnableEnemySelector(bool enabled)
+    public void EnableInitiateAttackSelector(bool enabled)
     {
-        enemySelector.SetActive(enabled);
-        //combatCtrl.combatState = CombatState.ENEMYSELECT;
+        initiateAttackSelector.SetActive(enabled);
+    }
+    public void OnInitiateAttackButton()
+    {
+        EnableInitiateAttackSelector(false);
+        combatCtrl.combatState = CombatState.COMBAT;
+    }
+    public int CurrentMove()
+    {
+        return currentMove;
     }
 }
-*/

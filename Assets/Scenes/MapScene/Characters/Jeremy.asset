@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9980617792863f74db6b5d931dd6e4a7, type: 3}
   m_Name: Jeremy
   m_EditorClassIdentifier: 
+  sprite: {fileID: 950650993592285724, guid: 8f1c0576b31ac6a439a8215666af150e, type: 3}
   name: Jeremy
   description: Hack Attacker
   type1: 1

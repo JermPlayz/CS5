@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9980617792863f74db6b5d931dd6e4a7, type: 3}
   m_Name: Tyler
   m_EditorClassIdentifier: 
-  name: 
+  sprite: {fileID: -8404040051688745268, guid: afbc6b078c9237f45abaab5f75e2cb29, type: 3}
+  name: Tyler
   description: 'Data Based Attack!
 
 '
@@ -25,4 +26,8 @@ MonoBehaviour:
   speed: 10
   expYield: 10
   growthRate: 0
-  learnableMoves: []
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: bd9e95eb73eef564f8c559731a5435e6, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 0084b6d981d3cd24aa2bda00f406a7a2, type: 2}
+    level: 1
