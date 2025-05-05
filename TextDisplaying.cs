@@ -27,22 +27,6 @@ namespace ByteBattle.Typography.Typewriter
 
         [Header("Typewriter Settings")]
         [SerializeField] private float charactersPerSecond = 20; 
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         private void Awake()
         {
@@ -56,6 +40,6 @@ namespace ByteBattle.Typography.Typewriter
 
 
 
-
-
+    }
+    }
 
