@@ -139,4 +139,8 @@ public class ActionUI : MonoBehaviour
     {
         return currentMove;
     }
+    public int CurrentMoveRange()
+    {
+        return characterUnit.Character.Moves[currentMove].Base.Range;
+    }
 }

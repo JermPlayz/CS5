@@ -12,7 +12,6 @@ public class Character
     public int Exp{get; set;}
 
     public int HP{get; set;}
-    public int CurrentHP{get; set;}
 
     public List<Move> Moves {get; set;}
     public bool isDeclared{get; set;}
@@ -44,12 +43,8 @@ public class Character
         Exp = Base.GetExpForLevel(Level);
 
         CalculateStats();
-        if(!isDeclared)
-        {
-            CurrentHP = MaxHP;
-            isDeclared = true;
-        }
-        HP = CurrentHP; //make a current HP vs Max HP
+        HP = MaxHP;
+        Debug.Log($"HP: {HP}");
 
         ResetStatBoost();
     }
@@ -63,7 +58,7 @@ public class Character
         Stats.Add(Stat.SpDefense, Mathf.FloorToInt((Base.SpDefense * Level) / 100f) + 5);
         Stats.Add(Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5);
 
-        MaxHP = Mathf.FloorToInt((Base.Speed * Level) / 100f) + 10 + Level;
+        MaxHP = Base.MaxHP;
     }
 
     void ResetStatBoost()
@@ -148,13 +143,10 @@ public class Character
 
     public bool TakeDamage(Move move, Character attacker)
     {
-        float modifiers = Random.Range(.85f, 1f);
-        float a = (2 * attacker.Level + 10) / 250f;
-        float d = a * move.Base.Power * ((float) attacker.Attack / Defense) + 2;
-        int damage = Mathf.FloorToInt(d * modifiers);
+        int damage = move.Base.Power;
+        Debug.Log($"Move Base Power: {move.Base.Power}");
 
         HP -= damage;
-        CurrentHP = HP;
         if(HP <= 0)
         {
             HP = 0;

@@ -117,7 +117,7 @@ public enum CharacterType
 {
     None,
     Hacker,
-    Data_Structurer,
+    Data_Pro,
     Debugger,
     IT_Support
 }
