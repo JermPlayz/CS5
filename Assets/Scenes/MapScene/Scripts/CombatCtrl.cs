@@ -157,17 +157,21 @@ public class CombatCtrl : MonoBehaviour
 
         if(combatState == CombatState.ENEMYTURN)
         {
-            /*foreach(Enemy enemy in Enemylist)
+            foreach(CharacterUnit enemy in Enemylist)
             {
-                int r = UnityEngine.Random.Range(0, enemy.Moves.Count);
-                Vector3 arrpoint = enemy.closestplayer.transform.position + (new Vector3(enemy.Moves[r].Base.Range, 0, 0));
+                int r = UnityEngine.Random.Range(0, enemy.Character.Moves.Count);
+                Vector3 arrpoint = characterUnit.transform.position + (new Vector3(enemy.Character.Moves[r].Base.Range, 0, 0));// change to find closest player
+                Debug.Log("arrpoint assigned");
+                Debug.Log(arrpoint);
                 //if(Math.Abs(arrpoint.x - enemy.Getpos().x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.Getpos().y) <= enemy.moveconstraint)
                 //{ uncomment after alpha
-                    enemy.UpdatePos(arrpoint);
-                    Enemyattacks(enemy.Moves[r], enemy.closestplayer);
+                    enemy.transform.position = arrpoint;
+                    Debug.Log("position updated");
+                    Debug.Log(enemy.transform.position);
+                    Enemyattacks(enemy.Character.Moves[r], characterUnit); //change to find closest player
                 //}
                 
-            }*/
+            }
             combatState = CombatState.SELECTOR;
         }
     }
@@ -241,14 +245,15 @@ public class CombatCtrl : MonoBehaviour
         //enemyAnimator.Play("Stay Dead");
 
         StartCoroutine(EnableCombatCutscene(false));
-        combatState = CombatState.SELECTOR;
+        //add loop through characters
+        combatState = CombatState.ENEMYTURN;
     }
     IEnumerator waitasecond()
     {
         yield return new WaitForSeconds(1f);
     }
 
-    public void Enemyattacks(Move move, GameObject player)
+    public void Enemyattacks(Move move, CharacterUnit player)
     {
 
     }
