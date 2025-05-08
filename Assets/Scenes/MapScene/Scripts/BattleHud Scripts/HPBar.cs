@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HPBar : MonoBehaviour
 {
-    [SerializeField] GameObject health;
+    public Image healthBar;
 
-    public void SetHP(float hpNormalized)
+    public void SetHP(float currentHP)
     {
-        health.transform.localScale = new Vector3(hpNormalized, 1f);
+        healthBar.fillAmount = currentHP;
     }
 }

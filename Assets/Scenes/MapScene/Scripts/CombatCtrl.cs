@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 
-public enum CombatState {SELECTOR, MOVEMENT, ACTION, ATTACKS, ENEMYSELECTOR, COMBAT, ENEMYTURN}
+public enum CombatState {BUSY, SELECTOR, MOVEMENT, ACTION, ATTACKS, ENEMYSELECTOR, DIALOGUE, COMBAT, ENEMYTURN}
 
 public class CombatCtrl : MonoBehaviour
 {
@@ -23,7 +23,7 @@ public class CombatCtrl : MonoBehaviour
     RaycastHit2D chosenCharacter;
     public ActionUI actionUI;
     public int movementconstraint;
-    public List<Enemy> Enemylist;
+    public List<CharacterUnit> Enemylist;
     public GameObject combatCutscene;
     public GameObject viewPlayerHud;
     public GameObject viewEnemyHud;
@@ -45,6 +45,11 @@ public class CombatCtrl : MonoBehaviour
         AudioManager.Instance.ChangeMusic1(AudioManager.SoundType.Music_Battle_Rain);
         AudioManager.Instance.ChangeMusic2(AudioManager.SoundType.Music_Battle_Thunder);
         AudioManager.Instance.MuteMusic2();
+        characterUnit.Setup();
+        foreach(CharacterUnit enemy in Enemylist)
+        {
+            enemy.Setup();
+        }
     }
 
     // Update is called once per frame
@@ -110,7 +115,6 @@ public class CombatCtrl : MonoBehaviour
 
         if(combatState == CombatState.ATTACKS)
         {
-            characterUnit.Setup();
             actionUI.NewButton(characterUnit.Character.Moves);
         }
 
@@ -121,33 +125,59 @@ public class CombatCtrl : MonoBehaviour
             if(Input.GetMouseButtonDown(0))
             {
                 hit = Physics2D.Raycast(worldPoint, Vector2.down);
-                Debug.Log(hit.collider.name);
-                /*Vector3Int tpos = tileMap.WorldToCell(worldPoint);
-                Debug.Log(tpos);
-                var tile = tileMap.GetTile(tpos);
-                Debug.Log(tile);*/
-                enemyUnit.Setup();
-                enemyHud.SetHUD(enemyUnit);
-                viewEnemyHud.SetActive(true);
-                actionUI.EnableInitiateAttackSelector(true);
+                Vector3Int epos = tileMap.WorldToCell(worldPoint);
+                if(Math.Abs(epos.x - ptpos.x) <= actionUI.CurrentMoveRange() && Math.Abs(epos.y - ptpos.y) <= actionUI.CurrentMoveRange())
+                {   
+                    Debug.Log(hit.collider.name);
+                    /*Vector3Int tpos = tileMap.WorldToCell(worldPoint);
+                    Debug.Log(tpos);
+                    var tile = tileMap.GetTile(tpos);
+                    Debug.Log(tile);*/
+                    //enemyUnit.Setup();
+                    if(hit.collider.TryGetComponent<CharacterUnit>(out CharacterUnit unit))
+                    {
+                        enemyUnit = unit;
+                        enemyHud.SetHUD(enemyUnit);
+                        viewEnemyHud.SetActive(true);
+                        actionUI.EnableInitiateAttackSelector(true);
+                    }
+                    else
+                    {
+                        Debug.Log("This doesnt work");
+                    }
+                }
             }
         }
+
+        // if(combatState == CombatState.DIALOGUE)
+        // {
+        //     if(enemyUnit.hasDialogue == true)
+        //     {
+
+        //     }
+        //     combatState = CombatState.BUSY;
+        // }
         
         if(combatState == CombatState.COMBAT)
         {
             StartCoroutine(PlayerAttack());
+            combatState = CombatState.BUSY;
         }
 
         if(combatState == CombatState.ENEMYTURN)
         {
-            foreach(Enemy enemy in Enemylist)
+            foreach(CharacterUnit enemy in Enemylist)
             {
-                int r = UnityEngine.Random.Range(0, enemy.Moves.Count);
-                Vector3 arrpoint = enemy.closestplayer.transform.position + (new Vector3(enemy.Moves[r].Base.Range, 0, 0));
+                int r = UnityEngine.Random.Range(0, enemy.Character.Moves.Count);
+                Vector3 arrpoint = characterUnit.transform.position + (new Vector3(enemy.Character.Moves[r].Base.Range, 0, 0));// change to find closest player
+                Debug.Log("arrpoint assigned");
+                Debug.Log(arrpoint);
                 //if(Math.Abs(arrpoint.x - enemy.Getpos().x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.Getpos().y) <= enemy.moveconstraint)
                 //{ uncomment after alpha
-                    enemy.UpdatePos(arrpoint);
-                    Enemyattacks(enemy.Moves[r], enemy.closestplayer);
+                    enemy.transform.position = arrpoint;
+                    Debug.Log("position updated");
+                    Debug.Log(enemy.transform.position);
+                    Enemyattacks(enemy.Character.Moves[r], characterUnit); //change to find closest player
                 //}
                 
             }
@@ -162,9 +192,9 @@ public class CombatCtrl : MonoBehaviour
             AudioManager.Instance.MuteMusic1();
             AudioManager.Instance.UnmuteMusic2();
             yield return new WaitForSeconds(.25f);
-            characterAnimator.Play("Attack");
+            //characterAnimator.Play("Attack");
             yield return new WaitForSeconds(.575f);
-            characterAnimator.Play("Idle");
+            //characterAnimator.Play("Idle");
         }
         else
         {
@@ -202,15 +232,16 @@ public class CombatCtrl : MonoBehaviour
 
         // if(CheckIfMoveHits(move, characterUnit.Character, enemyUnit.Character))
         // {
+            Debug.Log(enemyUnit.Character.HP);
             bool isDead = enemyUnit.Character.TakeDamage(move, characterUnit.Character);
-            if(isDead)
-            {
-                enemyHud.UpdateHP();
-                enemyAnimator.Play("Dead");
-            }
+            Debug.Log(enemyUnit.Character.HP);
+            enemyHud.UpdateHP();
+            // if(isDead)
+            // {
+            //     //enemyAnimator.Play("Dead");
+            // }
             // else
             // {
-            //     enemyHud.UpdateHP();
             //     enemyAnimator.Play("Hurt");
             // }
         // }
@@ -220,17 +251,18 @@ public class CombatCtrl : MonoBehaviour
         // }
 
         yield return new WaitForSeconds(1f);
-        enemyAnimator.Play("Stay Dead");
+        //enemyAnimator.Play("Stay Dead");
 
         StartCoroutine(EnableCombatCutscene(false));
-        combatState = CombatState.SELECTOR;
+        //add loop through characters
+        combatState = CombatState.ENEMYTURN;
     }
     IEnumerator waitasecond()
     {
         yield return new WaitForSeconds(1f);
     }
 
-    public void Enemyattacks(Move move, GameObject player)
+    public void Enemyattacks(Move move, CharacterUnit player)
     {
 
     }

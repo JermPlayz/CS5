@@ -10,6 +10,7 @@ public class CharacterUnit : MonoBehaviour
     public int level;
     public bool isPlayerUnit;
     public Character Character{get; set;}
+    public int CurrentHP{get; set;}
     
     public void Setup()
     {
