@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 
-public enum CombatState {BUSY, SELECTOR, MOVEMENT, ACTION, ATTACKS, ENEMYSELECTOR, COMBAT, ENEMYTURN}
+public enum CombatState {BUSY, SELECTOR, MOVEMENT, ACTION, ATTACKS, ENEMYSELECTOR, DIALOGUE, COMBAT, ENEMYTURN}
 
 public class CombatCtrl : MonoBehaviour
 {
@@ -147,6 +147,12 @@ public class CombatCtrl : MonoBehaviour
                     }
                 }
             }
+        }
+
+        if(combatState == CombatState.DIALOGUE)
+        {
+            enemyUnit.DialogueTrigger.TriggerDialogue();
+            combatState = CombatState.BUSY;
         }
         
         if(combatState == CombatState.COMBAT)

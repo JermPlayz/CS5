@@ -27,8 +27,12 @@ public class Dialogue
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+    public bool hasDialogue;
     public void TriggerDialogue()
     {
-        DialogueManager.Instance.ShowDialogue(dialogue);
+        if(hasDialogue)
+        {
+            DialogueManager.Instance.ShowDialogue(dialogue);
+        }
     }
 }

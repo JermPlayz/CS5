@@ -24,17 +24,8 @@ public class DialogueManager : MonoBehaviour
         {
             Instance = this;
         }
+        EnableNextSelector(false);
     }
-
-    public void Update()
-    {
-        if(canEnter == true && Input.GetKeyDown(KeyCode.Space))
-        {
-            DisplayNextDialogueLine();
-            EnableNextSelector(false);
-        }
-    }
-
     public void ShowDialogue(Dialogue dialogue)
     {
         dialogueBox.SetActive(true);
@@ -76,15 +67,19 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(1f/lettersPerSecond);
         }
+        yield return new WaitForSeconds(.5f);
         EnableNextSelector(true);
-        yield return new WaitForSeconds(2f);
     }
 
     public void EnableNextSelector(bool enabled)
     {
         nextSelector.SetActive(enabled);
     }
-
+    public void OnNextButton()
+    {
+        DisplayNextDialogueLine();
+        EnableNextSelector(false);
+    }
     void EndDialogue()
     {
         dialogueBox.SetActive(false);
