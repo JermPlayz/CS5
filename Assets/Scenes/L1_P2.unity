@@ -256,6 +256,132 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1001 &414366591
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3253180456573256711, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253180456573256711, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253180456573256711, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253180456573256711, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253180456573256711, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253180456573256711, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253180456573256711, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253180456573256711, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253180456573256711, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253180456573256711, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656298143137325205, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: Base
+      value: 
+      objectReference: {fileID: 11400000, guid: fd08a04e9d3f36947baf42de4e9299dc, type: 2}
+    - target: {fileID: 4656298143137325205, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656298143137325205, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656298143137325205, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293847573167466331, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293847573167466331, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7293847573167466331, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 414366594}
+    - targetCorrespondingSourceObject: {fileID: 7293847573167466331, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 414366593}
+  m_SourcePrefab: {fileID: 100100000, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+--- !u!1 &414366592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7293847573167466331, guid: f10fdf0f4f4109d48a00a36d66d3cd0e, type: 3}
+  m_PrefabInstance: {fileID: 414366591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &414366593
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414366592}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 446015eff5f97e749b783ad7fd4a7c77, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &414366594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414366592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b50d7cb7b126d84cb46e63c27f643fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _base: {fileID: 11400000, guid: d231d67df9c124c4286d440040b19a9e, type: 2}
+  Name: Mr. Watson
+  level: 3
+  isPlayerUnit: 0
 --- !u!1 &763520583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,6 +2349,7 @@ GameObject:
   - component: {fileID: 896322134}
   - component: {fileID: 896322133}
   - component: {fileID: 896322135}
+  - component: {fileID: 896322136}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2296,8 +2423,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.2
-  m_fontSizeBase: 0.2
+  m_fontSize: 0.17
+  m_fontSizeBase: 0.17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2362,6 +2489,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 0}
   typingSpeed: 0.1
+--- !u!114 &896322136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896322131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d1abc46a012ac43993278f0a11fd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1348151207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,7 +2534,7 @@ Animator:
   m_GameObject: {fileID: 1348151207}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dfbf048efae9d414885c0a02db78f434, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2437,8 +2576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b50d7cb7b126d84cb46e63c27f643fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _base: {fileID: 11400000, guid: dc3eccb1d813d9b4a80eecbfc65529ca, type: 2}
-  Name: Jeremy
+  _base: {fileID: 11400000, guid: daf18acb8ef584b428b9e30fd4d7cd90, type: 2}
+  Name: Watson
   level: 1
   isPlayerUnit: 1
 --- !u!114 &1348151211
@@ -2581,7 +2720,7 @@ Transform:
   m_GameObject: {fileID: 1348151207}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.85, y: 0.62, z: 0}
+  m_LocalPosition: {x: -5.98, y: 1, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2841,8 +2980,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.4
-  m_fontSizeBase: 0.4
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2901,3 +3040,4 @@ SceneRoots:
   - {fileID: 1864743561}
   - {fileID: 1641550118}
   - {fileID: 1348151215}
+  - {fileID: 414366591}
