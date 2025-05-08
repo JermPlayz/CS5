@@ -172,13 +172,16 @@ public class CombatCtrl : MonoBehaviour
                 Vector3 arrpoint = characterUnit.transform.position + (new Vector3(enemy.Character.Moves[r].Base.Range, 0, 0));// change to find closest player
                 Debug.Log("arrpoint assigned");
                 Debug.Log(arrpoint);
-                //if(Math.Abs(arrpoint.x - enemy.Getpos().x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.Getpos().y) <= enemy.moveconstraint)
-                //{ uncomment after alpha
+                if(Math.Abs(arrpoint.x - enemy.transform.position.x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.transform.position.y) <= enemy.moveconstraint)
+                {
+                    //if() check for overlapping
                     enemy.transform.position = arrpoint;
                     Debug.Log("position updated");
                     Debug.Log(enemy.transform.position);
                     Enemyattacks(enemy.Character.Moves[r], characterUnit); //change to find closest player
-                //}
+                }else{
+                    //move max of moveconstraint
+                }
                 
             }
             combatState = CombatState.SELECTOR;

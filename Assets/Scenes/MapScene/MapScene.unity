@@ -2689,6 +2689,7 @@ MonoBehaviour:
   Name: Chi Chi
   level: 20
   isPlayerUnit: 0
+  moveconstraint: 0
 --- !u!58 &106107430
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4169,6 +4170,7 @@ MonoBehaviour:
   Name: Mr. Watson
   level: 3
   isPlayerUnit: 0
+  moveconstraint: 3
 --- !u!1 &295677340
 GameObject:
   m_ObjectHideFlags: 0
@@ -8124,7 +8126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1190310135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10380,6 +10382,7 @@ MonoBehaviour:
   Name: Jeremy
   level: 1
   isPlayerUnit: 1
+  moveconstraint: 0
 --- !u!95 &1687008503
 Animator:
   serializedVersion: 7
