@@ -149,11 +149,14 @@ public class CombatCtrl : MonoBehaviour
             }
         }
 
-        if(combatState == CombatState.DIALOGUE)
-        {
-            enemyUnit.DialogueTrigger.TriggerDialogue();
-            combatState = CombatState.BUSY;
-        }
+        // if(combatState == CombatState.DIALOGUE)
+        // {
+        //     if(enemyUnit.hasDialogue == true)
+        //     {
+
+        //     }
+        //     combatState = CombatState.BUSY;
+        // }
         
         if(combatState == CombatState.COMBAT)
         {

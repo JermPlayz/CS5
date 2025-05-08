@@ -133,7 +133,7 @@ public class ActionUI : MonoBehaviour
     public void OnInitiateAttackButton()
     {
         EnableInitiateAttackSelector(false);
-        combatCtrl.combatState = CombatState.DIALOGUE;
+        combatCtrl.combatState = CombatState.COMBAT;
     }
     public int CurrentMove()
     {
