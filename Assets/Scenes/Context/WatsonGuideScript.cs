@@ -1,7 +1,7 @@
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class WatsonGuideScript : MonoBehaviour
+/*public class WatsonGuideScript : MonoBehaviour
 {
     public TMP_Text textMeshPro; // Reference to the TextMeshPro component
     public float typingSpeed = 0.01f; // Speed of typing in seconds
@@ -41,3 +41,4 @@ public class WatsonGuideScript : MonoBehaviour
     // make the code so tha it highlights each part of the UI and tells you what is what 
 
 }
+*/

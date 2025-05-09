@@ -136,10 +136,13 @@ public class CombatCtrl : MonoBehaviour
                     //enemyUnit.Setup();
                     if(hit.collider.TryGetComponent<CharacterUnit>(out CharacterUnit unit))
                     {
-                        enemyUnit = unit;
-                        enemyHud.SetHUD(enemyUnit);
-                        viewEnemyHud.SetActive(true);
-                        actionUI.EnableInitiateAttackSelector(true);
+                        if(!unit.isPlayerUnit)
+                        {
+                            enemyUnit = unit;
+                            enemyHud.SetHUD(enemyUnit);
+                            viewEnemyHud.SetActive(true);
+                            actionUI.EnableInitiateAttackSelector(true);
+                        }
                     }
                     else
                     {
