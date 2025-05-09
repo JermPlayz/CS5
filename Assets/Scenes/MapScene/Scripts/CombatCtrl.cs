@@ -172,19 +172,7 @@ public class CombatCtrl : MonoBehaviour
             foreach(CharacterUnit enemy in Enemylist)
             {
                 int r = UnityEngine.Random.Range(0, enemy.Character.Moves.Count);
-                Vector3 arrpoint = characterUnit.transform.position + (new Vector3(enemy.Character.Moves[r].Base.Range, 0, 0));// change to find closest player
-                Debug.Log("arrpoint assigned");
-                Debug.Log(arrpoint);
-                if(Math.Abs(arrpoint.x - enemy.transform.position.x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.transform.position.y) <= enemy.moveconstraint)
-                {
-                    //if() check for overlapping
-                    enemy.transform.position = arrpoint;
-                    Debug.Log("position updated");
-                    Debug.Log(enemy.transform.position);
-                    Enemyattacks(enemy.Character.Moves[r], characterUnit); //change to find closest player
-                }else{
-                    //move max of moveconstraint
-                }
+                StartCoroutine(Enemyattack(enemy.Character.Moves[r], enemy));
                 
             }
             combatState = CombatState.SELECTOR;
@@ -271,5 +259,29 @@ public class CombatCtrl : MonoBehaviour
     public void Enemyattacks(Move move, CharacterUnit player)
     {
 
+    }
+
+    IEnumerator Enemyattack(Move move, CharacterUnit enemy)
+    {
+        Vector3 arrpoint = characterUnit.transform.position + (new Vector3(move.Base.Range, 0, 0));// change to find player
+        Debug.Log("arrpoint assigned");
+        yield return new WaitForSeconds(1f);
+        if(Math.Abs(arrpoint.x - enemy.transform.position.x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.transform.position.y) <= enemy.moveconstraint)
+        {
+            //hit = null;
+            Debug.Log($"1:hit is equal to {hit}");
+            var checkenemy = Physics2D.Raycast(arrpoint, Vector2.down);
+            Debug.Log($"2:hit is equal to {hit}");
+            //if(Math.Abs(arrpoint.x - hit.transform.position.x) <= 1f && Math.Abs(arrpoint.y - hit.transform.position.y) <= 1f)
+            if(checkenemy)
+            {
+                enemy.transform.position = arrpoint;
+                Debug.Log("position updated");
+                Debug.Log(enemy.transform.position);
+                Enemyattacks(move, characterUnit); //change to find player
+            }
+        }else{
+            //move max of moveconstraint
+        }
     }
 }
