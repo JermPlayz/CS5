@@ -1,6 +1,6 @@
 using JetBrains.Annotations;
 using UnityEngine;
-public class WatsonGuideScript : MonoBehaviour
+/*public class WatsonGuideScript : MonoBehaviour
 {
     int speed = 3;
     public TMP_Text textMeshPro; // Reference to the TextMeshPro component
@@ -40,3 +40,4 @@ public class WatsonGuideScript : MonoBehaviour
     }
     // make the code so tha it highlights each part of the UI and tells you what is what 
 }
+*/
