@@ -44,7 +44,7 @@ public class ActionUI : MonoBehaviour
     {
         Debug.Log("Wait Button");
         EnableActionSelector(false);
-        //combatCtrl.combatState = CombatState.ENDTURN;
+        combatCtrl.combatState = CombatState.ENEMYTURN;
 
     }
     public void EnableAttackSelector(bool enabled)
