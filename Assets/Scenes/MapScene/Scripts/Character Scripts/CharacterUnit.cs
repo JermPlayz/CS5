@@ -11,6 +11,7 @@ public class CharacterUnit : MonoBehaviour
     public bool isPlayerUnit;
     public Character Character{get; set;}
     public int CurrentHP{get; set;}
+    public int moveconstraint;
     
     public void Setup()
     {
