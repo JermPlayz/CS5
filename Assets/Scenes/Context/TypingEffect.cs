@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro; // Import TextMeshPro
-/*
+
 public class TypingEffect : MonoBehaviour
 {
     public TMP_Text textMeshPro; // Reference to the TextMeshPro component
@@ -26,4 +26,3 @@ public class TypingEffect : MonoBehaviour
         }
     }
 }
-*/
