@@ -2686,7 +2686,7 @@ MonoBehaviour:
   Name: Chi Chi
   level: 20
   isPlayerUnit: 0
-  moveconstraint: 0
+  moveconstraint: 3
 --- !u!58 &106107430
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4167,7 +4167,7 @@ MonoBehaviour:
   Name: Mr. Watson
   level: 3
   isPlayerUnit: 0
-  moveconstraint: 0
+  moveconstraint: 3
 --- !u!1 &295677340
 GameObject:
   m_ObjectHideFlags: 0
@@ -6596,7 +6596,7 @@ MonoBehaviour:
   Name: Tomiwa
   level: 20
   isPlayerUnit: 0
-  moveconstraint: 0
+  moveconstraint: 3
 --- !u!58 &841267899
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13341,6 +13341,7 @@ MonoBehaviour:
   Enemylist:
   - {fileID: 293349446}
   - {fileID: 106107429}
+  - {fileID: 841267898}
   combatCutscene: {fileID: 2117341147}
   viewPlayerHud: {fileID: 271107970}
   viewEnemyHud: {fileID: 799428574}

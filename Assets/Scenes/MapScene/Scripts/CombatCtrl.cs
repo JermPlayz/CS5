@@ -173,8 +173,9 @@ public class CombatCtrl : MonoBehaviour
             {
                 int r = UnityEngine.Random.Range(0, enemy.Character.Moves.Count);
                 StartCoroutine(Enemyattack(enemy.Character.Moves[r], enemy));
-                
+                combatState = CombatState.BUSY;
             }
+            hit = new RaycastHit2D();
             combatState = CombatState.SELECTOR;
         }
     }
@@ -264,24 +265,31 @@ public class CombatCtrl : MonoBehaviour
     IEnumerator Enemyattack(Move move, CharacterUnit enemy)
     {
         Vector3 arrpoint = characterUnit.transform.position + (new Vector3(move.Base.Range, 0, 0));// change to find player
+        Debug.Log(enemy._base);
         Debug.Log("arrpoint assigned");
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(1f);
         if(Math.Abs(arrpoint.x - enemy.transform.position.x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.transform.position.y) <= enemy.moveconstraint)
         {
             //hit = null;
-            Debug.Log($"1:hit is equal to {hit}");
             var checkenemy = Physics2D.Raycast(arrpoint, Vector2.down);
-            Debug.Log($"2:hit is equal to {hit}");
+            //Debug.Log($"2:hit is equal to {checkenemy.collider.name}");
             //if(Math.Abs(arrpoint.x - hit.transform.position.x) <= 1f && Math.Abs(arrpoint.y - hit.transform.position.y) <= 1f)
-            if(checkenemy)
+            if(checkenemy.collider == null)
             {
+                Debug.Log(checkenemy.collider);
                 enemy.transform.position = arrpoint;
-                Debug.Log("position updated");
+                Debug.Log("position updated to");
                 Debug.Log(enemy.transform.position);
                 Enemyattacks(move, characterUnit); //change to find player
+            }else{
+                Debug.Log("in first else");
             }
         }else{
             //move max of moveconstraint
+            Debug.Log("in else");
+            Debug.Log(Math.Abs(arrpoint.x - enemy.transform.position.x));
+            Debug.Log(enemy.moveconstraint);
         }
+        yield return new WaitForSeconds(1f);
     }
 }
