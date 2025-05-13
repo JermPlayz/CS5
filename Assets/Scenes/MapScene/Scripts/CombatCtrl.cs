@@ -286,7 +286,16 @@ public class CombatCtrl : MonoBehaviour
 
     IEnumerator Enemyattack(Move move, CharacterUnit enemy)
     {
-        Vector3 arrpoint = characterUnit.transform.position + (new Vector3(move.Base.Range, 0, 0));// change to find player
+        Vector3 arrpoint;
+        if(enemy.Name == "Enemy1")
+        {
+            arrpoint = characterUnit.transform.position + (new Vector3(move.Base.Range, 0, 0));// change to find player
+        }else if(enemy.Name == "Enemy2")
+        {
+            arrpoint = characterUnit.transform.position + (new Vector3(0, move.Base.Range, 0));
+        }else{
+            arrpoint = characterUnit.transform.position + (new Vector3(0, -(move.Base.Range), 0));
+        }
         Debug.Log(enemy._base);
         //yield return new WaitForSeconds(1f);
         //loop:
