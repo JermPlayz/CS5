@@ -168,7 +168,9 @@ public class CombatCtrl : MonoBehaviour
             }
             if(Input.GetKeyDown("escape"))
             {
-                combatState = CombatState.ATTACKS;
+                viewPlayerHud.SetActive(false);
+                viewEnemyHud.SetActive(false);
+                combatState = CombatState.ACTION;
             }
         }
 
