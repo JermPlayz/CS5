@@ -319,6 +319,7 @@ public class CombatCtrl : MonoBehaviour
                 arrpoint += new Vector3(1, 0, 0);
                 enemy.transform.position = arrpoint;
                 //goto loop;
+                Enemyattacks(move, characterUnit);
             }
         }else{
             //move max of moveconstraint
