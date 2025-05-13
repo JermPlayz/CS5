@@ -31,6 +31,7 @@ public class CombatCtrl : MonoBehaviour
     public BattleHud enemyHud;
     public Animator characterAnimator;
     public Animator enemyAnimator;
+    public Vector3 prevSpot;
     private void Start()
     {
         actionUI.EnableActionSelector(false);
@@ -97,6 +98,7 @@ public class CombatCtrl : MonoBehaviour
                     {
                         ptpos = (Vector3)tpos * 1.25f;
                         ptpos = new Vector3(ptpos.x + .65f, ptpos.y + .62f, ptpos.z);
+                        prevSpot = player1.transform.position;
                         player1.transform.position = ptpos;
                         Debug.Log(ptpos);
                         ptpos = tpos;
@@ -106,16 +108,30 @@ public class CombatCtrl : MonoBehaviour
                 }
                 
             }
-            
+            if(Input.GetKeyDown("escape"))
+            {
+                combatState = CombatState.SELECTOR;
+            }
         }
         if(combatState == CombatState.ACTION)
         {
             actionUI.EnableActionSelector(true);
+            if(Input.GetKeyDown("escape"))
+            {
+                actionUI.EnableActionSelector(false);
+                player1.transform.position = prevSpot;
+                ptpos = prevSpot;
+                combatState = CombatState.SELECTOR;
+            }
         }
 
         if(combatState == CombatState.ATTACKS)
         {
             actionUI.NewButton(characterUnit.Character.Moves);
+            if(Input.GetKeyDown("escape"))
+            {
+                combatState = CombatState.ACTION;
+            }
         }
 
         if(combatState == CombatState.ENEMYSELECTOR)
@@ -149,6 +165,10 @@ public class CombatCtrl : MonoBehaviour
                         Debug.Log("This doesnt work");
                     }
                 }
+            }
+            if(Input.GetKeyDown("escape"))
+            {
+                combatState = CombatState.ATTACKS;
             }
         }
 
