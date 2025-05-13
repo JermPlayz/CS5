@@ -266,8 +266,9 @@ public class CombatCtrl : MonoBehaviour
     {
         Vector3 arrpoint = characterUnit.transform.position + (new Vector3(move.Base.Range, 0, 0));// change to find player
         Debug.Log(enemy._base);
-        Debug.Log("arrpoint assigned");
         //yield return new WaitForSeconds(1f);
+        //loop:
+        Debug.Log("arrpoint assigned");
         if(Math.Abs(arrpoint.x - enemy.transform.position.x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.transform.position.y) <= enemy.moveconstraint)
         {
             //hit = null;
@@ -283,6 +284,10 @@ public class CombatCtrl : MonoBehaviour
                 Enemyattacks(move, characterUnit); //change to find player
             }else{
                 Debug.Log("in first else");
+                Debug.Log(checkenemy.collider);
+                arrpoint += new Vector3(1, 0, 0);
+                enemy.transform.position = arrpoint;
+                //goto loop;
             }
         }else{
             //move max of moveconstraint
