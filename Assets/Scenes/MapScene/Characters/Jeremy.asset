@@ -16,16 +16,20 @@ MonoBehaviour:
   name: Jeremy
   description: Hack Attacker
   type1: 1
-  maxHP: 10
-  attack: 10
-  defense: 10
-  spAttack: 10
-  spDefense: 10
-  speed: 10
-  expYield: 10
+  maxHP: 250
+  attack: 15
+  defense: 34
+  spAttack: 20
+  spDefense: 12
+  speed: 34
+  expYield: 100
   growthRate: 0
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: bd9e95eb73eef564f8c559731a5435e6, type: 2}
-    level: 0
+    level: 1
   - moveBase: {fileID: 11400000, guid: 0084b6d981d3cd24aa2bda00f406a7a2, type: 2}
     level: 1
+  - moveBase: {fileID: 11400000, guid: 44af8570bd45b7d4eb901179b84af51a, type: 2}
+    level: 2
+  - moveBase: {fileID: 11400000, guid: a2df74b65c5eae24cb53874f9726a4e2, type: 2}
+    level: 3

@@ -9,6 +9,7 @@ public class CharacterUnit : MonoBehaviour
     public string Name;
     public int level;
     public bool isPlayerUnit;
+    public bool hasDialogue;
     public Character Character{get; set;}
     public int CurrentHP{get; set;}
     public int moveconstraint;
@@ -16,5 +17,9 @@ public class CharacterUnit : MonoBehaviour
     public void Setup()
     {
         Character = new Character(_base, level);
+    }
+    public void UpdateLevel()
+    {
+        level = Character.Level;
     }
 }

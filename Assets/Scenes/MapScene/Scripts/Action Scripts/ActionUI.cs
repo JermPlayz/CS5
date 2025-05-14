@@ -73,7 +73,6 @@ public class ActionUI : MonoBehaviour
             }
             else
             {
-                moveButtons[i].image.sprite = noButton;
                 moveButtons[i].interactable = false;
             }
         }

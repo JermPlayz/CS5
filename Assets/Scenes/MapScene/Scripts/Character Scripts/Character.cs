@@ -85,7 +85,7 @@ public class Character
     {
         if(Exp > Base.GetExpForLevel(level + 1))
         {
-            ++level;
+            level++;
             return true;
         }
         return false;

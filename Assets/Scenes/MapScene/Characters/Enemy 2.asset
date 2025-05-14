@@ -16,13 +16,13 @@ MonoBehaviour:
   name: Enemy2
   description: 
   type1: 2
-  maxHP: 50
-  attack: 0
-  defense: 0
-  spAttack: 0
-  spDefense: 0
-  speed: 0
-  expYield: 0
+  maxHP: 20
+  attack: 5
+  defense: 35
+  spAttack: 34
+  spDefense: 36
+  speed: 23
+  expYield: 25
   growthRate: 0
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: a2df74b65c5eae24cb53874f9726a4e2, type: 2}
