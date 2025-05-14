@@ -31,6 +31,7 @@ public class CombatCtrl : MonoBehaviour
     public BattleHud enemyHud;
     public Animator characterAnimator;
     public Animator enemyAnimator;
+    public Vector3 prevSpot;
     private void Start()
     {
         actionUI.EnableActionSelector(false);
@@ -97,6 +98,7 @@ public class CombatCtrl : MonoBehaviour
                     {
                         ptpos = (Vector3)tpos * 1.25f;
                         ptpos = new Vector3(ptpos.x + .65f, ptpos.y + .62f, ptpos.z);
+                        prevSpot = player1.transform.position;
                         player1.transform.position = ptpos;
                         Debug.Log(ptpos);
                         ptpos = tpos;
@@ -106,16 +108,30 @@ public class CombatCtrl : MonoBehaviour
                 }
                 
             }
-            
+            if(Input.GetKeyDown("escape"))
+            {
+                combatState = CombatState.SELECTOR;
+            }
         }
         if(combatState == CombatState.ACTION)
         {
             actionUI.EnableActionSelector(true);
+            if(Input.GetKeyDown("escape"))
+            {
+                actionUI.EnableActionSelector(false);
+                player1.transform.position = prevSpot;
+                ptpos = prevSpot;
+                combatState = CombatState.SELECTOR;
+            }
         }
 
         if(combatState == CombatState.ATTACKS)
         {
             actionUI.NewButton(characterUnit.Character.Moves);
+            if(Input.GetKeyDown("escape"))
+            {
+                combatState = CombatState.ACTION;
+            }
         }
 
         if(combatState == CombatState.ENEMYSELECTOR)
@@ -149,6 +165,12 @@ public class CombatCtrl : MonoBehaviour
                         Debug.Log("This doesnt work");
                     }
                 }
+            }
+            if(Input.GetKeyDown("escape"))
+            {
+                viewPlayerHud.SetActive(false);
+                viewEnemyHud.SetActive(false);
+                combatState = CombatState.ACTION;
             }
         }
 
@@ -264,7 +286,16 @@ public class CombatCtrl : MonoBehaviour
 
     IEnumerator Enemyattack(Move move, CharacterUnit enemy)
     {
-        Vector3 arrpoint = characterUnit.transform.position + (new Vector3(move.Base.Range, 0, 0));// change to find player
+        Vector3 arrpoint;
+        if(enemy.Name == "Enemy1")
+        {
+            arrpoint = characterUnit.transform.position + (new Vector3(move.Base.Range, 0, 0));// change to find player
+        }else if(enemy.Name == "Enemy2")
+        {
+            arrpoint = characterUnit.transform.position + (new Vector3(0, move.Base.Range, 0));
+        }else{
+            arrpoint = characterUnit.transform.position + (new Vector3(0, -(move.Base.Range), 0));
+        }
         Debug.Log(enemy._base);
         //yield return new WaitForSeconds(1f);
         //loop:
@@ -288,6 +319,7 @@ public class CombatCtrl : MonoBehaviour
                 arrpoint += new Vector3(1, 0, 0);
                 enemy.transform.position = arrpoint;
                 //goto loop;
+                Enemyattacks(move, characterUnit);
             }
         }else{
             //move max of moveconstraint

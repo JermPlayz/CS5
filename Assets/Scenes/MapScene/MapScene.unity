@@ -2683,7 +2683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _base: {fileID: 11400000, guid: 33de205429be2314eb4579116279ccd7, type: 2}
-  Name: Chi Chi
+  Name: Enemy2
   level: 20
   isPlayerUnit: 0
   moveconstraint: 3
@@ -4164,7 +4164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _base: {fileID: 11400000, guid: d231d67df9c124c4286d440040b19a9e, type: 2}
-  Name: Mr. Watson
+  Name: Enemy1
   level: 3
   isPlayerUnit: 0
   moveconstraint: 3
@@ -13349,6 +13349,7 @@ MonoBehaviour:
   enemyHud: {fileID: 1737079253}
   characterAnimator: {fileID: 0}
   enemyAnimator: {fileID: 0}
+  prevSpot: {x: 0, y: 0, z: 0}
 --- !u!4 &2136189902
 Transform:
   m_ObjectHideFlags: 0
