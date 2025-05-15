@@ -1,0 +1,1667 @@
+fileFormatVersion: 2
+guid: d9ed548a0e4cd6b4cb6e1248c47fcf5a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8450300847161793553
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_0
+  - first:
+      213: 5986784555670895732
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_1
+  - first:
+      213: -3207314043276438376
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_2
+  - first:
+      213: 2805840167778220186
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_3
+  - first:
+      213: 215964273835400756
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_4
+  - first:
+      213: 5843510650630279974
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_5
+  - first:
+      213: 8556011311628767679
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_6
+  - first:
+      213: 7421385763719762425
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_7
+  - first:
+      213: -2699036266079135368
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_8
+  - first:
+      213: -5443773247374971723
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_9
+  - first:
+      213: 6639771357351832775
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_10
+  - first:
+      213: -59449398904399606
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_11
+  - first:
+      213: -5954574025713232489
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_12
+  - first:
+      213: -8284989942403471166
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_13
+  - first:
+      213: -8728341351607058072
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_14
+  - first:
+      213: 7854037648411881086
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_15
+  - first:
+      213: 3303079816038337805
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_16
+  - first:
+      213: -8145263592447944400
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_17
+  - first:
+      213: -6270677716879327196
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_18
+  - first:
+      213: -1070878553019694507
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_19
+  - first:
+      213: 4190156552993472476
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_20
+  - first:
+      213: -1925191843305349819
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_21
+  - first:
+      213: -1868365001173746399
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_22
+  - first:
+      213: -2922222453058964085
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_23
+  - first:
+      213: -670211460665685387
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_24
+  - first:
+      213: -5356444635845722325
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_25
+  - first:
+      213: 7990426982016870981
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_26
+  - first:
+      213: 1464418019033825405
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_27
+  - first:
+      213: 5132535149965548187
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_28
+  - first:
+      213: 3751788644056905864
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_29
+  - first:
+      213: 6299058434754134564
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_30
+  - first:
+      213: 2733720720201137910
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_31
+  - first:
+      213: 5400596673323623559
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_32
+  - first:
+      213: -892161020750371981
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_33
+  - first:
+      213: -2821606116411802967
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_34
+  - first:
+      213: 2925463402330903094
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_35
+  - first:
+      213: -836432665172604748
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_36
+  - first:
+      213: 6577851703181329249
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_37
+  - first:
+      213: 4021662636071794156
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_38
+  - first:
+      213: -8639868819943214471
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_39
+  - first:
+      213: 202527827293820856
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_40
+  - first:
+      213: 6757374908162315503
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_41
+  - first:
+      213: 1788418285118213741
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_42
+  - first:
+      213: -5013975602684669877
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_43
+  - first:
+      213: 3484386476323072425
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_44
+  - first:
+      213: -7384807675581104203
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_45
+  - first:
+      213: 6335820249805145949
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_46
+  - first:
+      213: -2836673642882943207
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_47
+  - first:
+      213: 861648894575737747
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_48
+  - first:
+      213: 223095392535943052
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_49
+  - first:
+      213: 4331420473206078657
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_50
+  - first:
+      213: -1480446903070107277
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_51
+  - first:
+      213: 1102266877794044297
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_52
+  - first:
+      213: 7480417937799054545
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_53
+  - first:
+      213: -5058077555782466098
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_54
+  - first:
+      213: -4840448065086261080
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_55
+  - first:
+      213: -91141542095449888
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_56
+  - first:
+      213: 5109796502828989386
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_57
+  - first:
+      213: 5935162857290269911
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_58
+  - first:
+      213: -24127525362938144
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_59
+  - first:
+      213: -2520027243288360013
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_60
+  - first:
+      213: -8062402473589977421
+    second: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_0
+      rect:
+        serializedVersion: 2
+        x: 2517
+        y: 3317
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe32dbfa6208aba80800000000000000
+      internalID: -8450300847161793553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_1
+      rect:
+        serializedVersion: 2
+        x: 4690
+        y: 3244
+        width: 99
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47cfe8385d4551350800000000000000
+      internalID: 5986784555670895732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_2
+      rect:
+        serializedVersion: 2
+        x: 5439
+        y: 3241
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894d267eed45d73d0800000000000000
+      internalID: -3207314043276438376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_3
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 3055
+        width: 82
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9871f044c850f620800000000000000
+      internalID: 2805840167778220186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_4
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 2981
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e5222ec524ff200800000000000000
+      internalID: 215964273835400756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_5
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 3061
+        width: 58
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623970cf9f1581150800000000000000
+      internalID: 5843510650630279974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_6
+      rect:
+        serializedVersion: 2
+        x: 3157
+        y: 3085
+        width: 75
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb15bdbc4fe0db670800000000000000
+      internalID: 8556011311628767679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_7
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 3005
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f158ab280f0ef660800000000000000
+      internalID: 7421385763719762425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_8
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 2896
+        width: 151
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 879d47ce0d81b8ad0800000000000000
+      internalID: -2699036266079135368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_9
+      rect:
+        serializedVersion: 2
+        x: 3752
+        y: 2902
+        width: 109
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bca078e215d374b0800000000000000
+      internalID: -5443773247374971723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_10
+      rect:
+        serializedVersion: 2
+        x: 4398
+        y: 2891
+        width: 161
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cce4c8ded4352c50800000000000000
+      internalID: 6639771357351832775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_11
+      rect:
+        serializedVersion: 2
+        x: 5911
+        y: 2981
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a095130361bcc2ff0800000000000000
+      internalID: -59449398904399606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_12
+      rect:
+        serializedVersion: 2
+        x: 4674
+        y: 2951
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7955898e87a1d5da0800000000000000
+      internalID: -5954574025713232489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_13
+      rect:
+        serializedVersion: 2
+        x: 2419
+        y: 2742
+        width: 91
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c86b5b0b8dc50d80800000000000000
+      internalID: -8284989942403471166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_14
+      rect:
+        serializedVersion: 2
+        x: 3263
+        y: 2728
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861cb1319c3bed680800000000000000
+      internalID: -8728341351607058072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_15
+      rect:
+        serializedVersion: 2
+        x: 3470
+        y: 2798
+        width: 98
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e6226f0a52ffc60800000000000000
+      internalID: 7854037648411881086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_16
+      rect:
+        serializedVersion: 2
+        x: 3613
+        y: 2798
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d4abb9795e6dd20800000000000000
+      internalID: 3303079816038337805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_17
+      rect:
+        serializedVersion: 2
+        x: 4215
+        y: 2752
+        width: 78
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039d73a0be536fe80800000000000000
+      internalID: -8145263592447944400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_18
+      rect:
+        serializedVersion: 2
+        x: 4351
+        y: 2795
+        width: 55
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420437807d31af8a0800000000000000
+      internalID: -6270677716879327196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_19
+      rect:
+        serializedVersion: 2
+        x: 4777
+        y: 2828
+        width: 91
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5524da931a97321f0800000000000000
+      internalID: -1070878553019694507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_20
+      rect:
+        serializedVersion: 2
+        x: 5300
+        y: 2677
+        width: 217
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf737e3f2d662a30800000000000000
+      internalID: 4190156552993472476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_21
+      rect:
+        serializedVersion: 2
+        x: 5599
+        y: 2719
+        width: 114
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d1e47f7385845e0800000000000000
+      internalID: -1925191843305349819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_22
+      rect:
+        serializedVersion: 2
+        x: 3176
+        y: 2539
+        width: 83
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12d34423eeb3216e0800000000000000
+      internalID: -1868365001173746399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_23
+      rect:
+        serializedVersion: 2
+        x: 4787
+        y: 2603
+        width: 121
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b85ffba592e2277d0800000000000000
+      internalID: -2922222453058964085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_24
+      rect:
+        serializedVersion: 2
+        x: 4953
+        y: 2629
+        width: 208
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a40aa3a3ee2b6f0800000000000000
+      internalID: -670211460665685387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2479
+        width: 49
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f7e5dbbf51aa5b0800000000000000
+      internalID: -5356444635845722325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_26
+      rect:
+        serializedVersion: 2
+        x: 4135
+        y: 2599
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54aefca4103b3ee60800000000000000
+      internalID: 7990426982016870981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_27
+      rect:
+        serializedVersion: 2
+        x: 4414
+        y: 2587
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d704133fd68a25410800000000000000
+      internalID: 1464418019033825405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_28
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 2483
+        width: 72
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a17ea868d6a3740800000000000000
+      internalID: 5132535149965548187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_29
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 2499
+        width: 88
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8883b59d4e7011430800000000000000
+      internalID: 3751788644056905864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_30
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 2316
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422c2f6c540ca6750800000000000000
+      internalID: 6299058434754134564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_31
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 2213
+        width: 212
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6feb6bad28020f520800000000000000
+      internalID: 2733720720201137910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_32
+      rect:
+        serializedVersion: 2
+        x: 4072
+        y: 2266
+        width: 191
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7846c909f06c2fa40800000000000000
+      internalID: 5400596673323623559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_33
+      rect:
+        serializedVersion: 2
+        x: 5432
+        y: 2359
+        width: 71
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37369bb47486e93f0800000000000000
+      internalID: -892161020750371981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_34
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 2080
+        width: 82
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa7437cf24a7d8d0800000000000000
+      internalID: -2821606116411802967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_35
+      rect:
+        serializedVersion: 2
+        x: 3832
+        y: 2097
+        width: 172
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 632d653f675599820800000000000000
+      internalID: 2925463402330903094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_36
+      rect:
+        serializedVersion: 2
+        x: 4075
+        y: 2193
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b88ad13ce46464f0800000000000000
+      internalID: -836432665172604748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_37
+      rect:
+        serializedVersion: 2
+        x: 5741
+        y: 2140
+        width: 145
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1634259e549394b50800000000000000
+      internalID: 6577851703181329249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_38
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1917
+        width: 150
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce5358d1cd0dfc730800000000000000
+      internalID: 4021662636071794156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_39
+      rect:
+        serializedVersion: 2
+        x: 2439
+        y: 1967
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972bf419515091880800000000000000
+      internalID: -8639868819943214471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1811
+        width: 63
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b7daf26cf58fc200800000000000000
+      internalID: 202527827293820856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_41
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 1844
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe417274da407cd50800000000000000
+      internalID: 6757374908162315503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_42
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1713
+        width: 32
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ec84274fcb1d810800000000000000
+      internalID: 1788418285118213741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_43
+      rect:
+        serializedVersion: 2
+        x: 3265
+        y: 1718
+        width: 54
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40518921c7ca6ab0800000000000000
+      internalID: -5013975602684669877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_44
+      rect:
+        serializedVersion: 2
+        x: 3321
+        y: 1554
+        width: 127
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a969650a070b5030800000000000000
+      internalID: 3484386476323072425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_45
+      rect:
+        serializedVersion: 2
+        x: 5588
+        y: 1608
+        width: 227
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bff862ab84e38990800000000000000
+      internalID: -7384807675581104203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_46
+      rect:
+        serializedVersion: 2
+        x: 2004
+        y: 1458
+        width: 131
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57cc56d2fa5de750800000000000000
+      internalID: 6335820249805145949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_47
+      rect:
+        serializedVersion: 2
+        x: 3506
+        y: 1571
+        width: 85
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917bf34e95c12a8d0800000000000000
+      internalID: -2836673642882943207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_48
+      rect:
+        serializedVersion: 2
+        x: 3995
+        y: 1359
+        width: 206
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b7b4aba1135fb00800000000000000
+      internalID: 861648894575737747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_49
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 1522
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c879127d318981300800000000000000
+      internalID: 223095392535943052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_50
+      rect:
+        serializedVersion: 2
+        x: 3406
+        y: 1282
+        width: 222
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc7d46b8fb4c1c30800000000000000
+      internalID: 4331420473206078657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_51
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 1372
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 379dda9a265647be0800000000000000
+      internalID: -1480446903070107277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_52
+      rect:
+        serializedVersion: 2
+        x: 2179
+        y: 896
+        width: 158
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989c792a2e90c4f00800000000000000
+      internalID: 1102266877794044297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_53
+      rect:
+        serializedVersion: 2
+        x: 4388
+        y: 736
+        width: 201
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d409f14b78cfc760800000000000000
+      internalID: 7480417937799054545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_54
+      rect:
+        serializedVersion: 2
+        x: 5276
+        y: 849
+        width: 238
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5c53903491ec9b0800000000000000
+      internalID: -5058077555782466098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_55
+      rect:
+        serializedVersion: 2
+        x: 5665
+        y: 810
+        width: 125
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a87ece612643dcb0800000000000000
+      internalID: -4840448065086261080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_56
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 610
+        width: 175
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e09e1710433cbef0800000000000000
+      internalID: -91141542095449888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_57
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 646
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acbb7a1b8d4a9e640800000000000000
+      internalID: 5109796502828989386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_58
+      rect:
+        serializedVersion: 2
+        x: 4670
+        y: 145
+        width: 72
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d401e04c2fed5250800000000000000
+      internalID: 5935162857290269911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_59
+      rect:
+        serializedVersion: 2
+        x: 5409
+        y: 118
+        width: 241
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eece6db4284aaff0800000000000000
+      internalID: -24127525362938144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_60
+      rect:
+        serializedVersion: 2
+        x: 3307
+        y: 5
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb8d7be290170dd0800000000000000
+      internalID: -2520027243288360013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_3d-abstract-digital-technology-green-number-light-particles_33164565_61
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 105
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be407daaa79c1090800000000000000
+      internalID: -8062402473589977421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
