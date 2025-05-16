@@ -559,7 +559,25 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tilelist4_0: 1673135524273798604
+      Tilelist4_1: 6850910950722163207
+      Tilelist4_10: -8531014665822819162
+      Tilelist4_11: 980617959458951934
+      Tilelist4_12: -4986884599682993390
+      Tilelist4_13: 6909670113092298603
+      Tilelist4_14: 2510581097569590479
+      Tilelist4_15: -5384342039848493852
+      Tilelist4_16: -6933028185340929557
+      Tilelist4_17: 6646174247587540056
+      Tilelist4_2: 2882171327726320101
+      Tilelist4_3: 3961481658893571374
+      Tilelist4_4: 137860694738750623
+      Tilelist4_5: -5863527516043309086
+      Tilelist4_6: 5462605338289988509
+      Tilelist4_7: -440442676701968749
+      Tilelist4_8: 1718301143302960670
+      Tilelist4_9: -8940199771847313781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

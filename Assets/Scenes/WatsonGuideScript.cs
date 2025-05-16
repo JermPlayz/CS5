@@ -1,10 +1,10 @@
-using System.Collections;
-using TMPro;
 using UnityEngine;
+using TMPro;
+using System.Collections;
 
-public class Watson : MonoBehaviour
+public class WatsonGuideScript : MonoBehaviour
 {
-    [SerializeField] TMP_Text textMeshPro; // Reference to the TextMeshPro component
+    public TMP_Text textMeshPro; // Reference to the TextMeshPro component
     public float typingSpeed = 0.01f; // Speed of typing in seconds
 
     private string[] dialogueTexts;
@@ -15,14 +15,13 @@ public class Watson : MonoBehaviour
         dialogueTexts = new string[]
         {
             "Hello, rookie Coder! Welcome to CS5: Byte and Battle! I’m Watson, your computing companion, here to keep you from getting compiled into oblivion. Ready to debug this mainframe?",
-            "Click a Coder. Got it? First, check your Player UI go ahead and click me. See the grid with your Coders’ stats? It shows HP, Attack, and Movement Range.",
-            "The UI is like your IDE’s debug panel. Look at the top: green bars for HP, an icon for Attack, and a way of Movement. Try clicking a Coder now. Ready?",
-            "Nice! Let’s get moving. Each Coder can move tiles on the grid per turn. Click your first Coder then click a place to move. Go for it!",
-            "Smooth move! Now, let’s Hack that Glitch. When your Coder is next to an enemy, click Hack to attack. Hack deals damage, and Debug gives HP. Click the Hack Button to unleash your attack. Show that enemy who’s boss!",
-            "If you want the player to go back you can press escape",
-            "That’s the spirit! Take out the last Enemy, and Level 1 is yours. I’ll pop back if you need me. Compile those Glitches!",
+            "First, check your Player UI at the bottom of the screen. See the grid with your Coders’ stats? That’s your lifeline! It shows HP, Attack, and Movement Range. Click a Coder to highlight it. Got it?",
+            "No worries! The UI is like your IDE’s debug panel. Look at the bottom: green bars for HP, a sword icon for Attack, and a boot icon for Movement. Try clicking a Coder now. Ready?",
+            "Nice! Let’s get moving. Each Coder can move up to 3 tiles on the grid per turn. Click your first Coder (Unit 1, the one with the Hack attack), then click a highlighted tile to move. Try moving toward that Glitch in the top left corner. Don’t wander into the red zones—those are enemy attack ranges! Go for it!",
+            "Smooth move! Now, let’s Hack that Glitch. When your Coder is next to an enemy, click the Glitch to attack. Hack deals 10 damage, and this Glitch has 15 HP, so it’ll take two hits. Click the Glitch to unleash your attack. Show that bug who’s boss!",
+            "That’s the spirit! Take out the last Glitch, and Level 1 is yours. I’ll pop back if you need me. Compile those Glitches!",
             "Keep going, there are more enemies to defeat!",
-            "Defeat the enemy and the next level will begin!"
+            "Come to the other side of the map and the next level will begin!"
         };
 
         textMeshPro.text = string.Empty;
