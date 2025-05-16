@@ -1,0 +1,169 @@
+
+//Temi Alabi 
+//LinkedIntList Lab
+//Purpose: To create a list that values are added to, a list where values can be added in specific indexes,
+//getting the position of a specic number, removing a number at a specific index and having the size counted with each change
+
+
+public class SLinkedList 
+{
+	public ListNode front;
+	//public ListNode temp;
+	public int size;
+	
+	LinkedIntList()
+	{
+		front= null;
+		size=0;
+	}
+	LinkedIntList(int value)
+	{
+		front= new ListNode(value);
+		size=1;
+	}
+	
+	public void add(int value)
+	{
+		//boolean empty= false; 
+		ListNode list= new ListNode(value); //create a new list node to hold all of the values
+		ListNode current= front; 
+		if(front == null)
+		{
+			front.next= list; // front starts pointing to the new list node which will have all of the values
+		}
+		else
+		{
+			while(current.next!=null) 
+			{
+				current=current.next; //points to next value
+			}
+			current.next=list;//adds it to list
+		}
+		size++;
+	}
+	
+	public void add(int index, int value)
+	{
+		ListNode temp= new ListNode(value);
+		
+		if(index==0)
+		{
+		    temp.next=front;
+		}
+		if(index<0 || index>size)
+		{
+			throw new IndexOutOfBoundsException(); 
+		}
+		else //check this
+		{
+			ListNode current = front;
+			for(int i = 0; i< index; i++) //goes through each position up to the one expected to be found
+			{
+				current = current.next;
+			}
+			current.next= new ListNode(value, current.next); //adds the next value into the position desired
+		}
+		size++;
+	}
+	
+	public int get(int index)
+	{
+		ListNode current= front;
+		int count=0; 
+		while (current!=null) //ensures each position actually is present
+		{
+			current=current.next; 
+			count++;
+			if(count==index)
+			{
+				 return current.data; //if the index is the counted position then automatically return its value 
+			}
+			
+		}
+		if(current==null)
+		{
+			throw new IndexOutOfBoundsException("Index out of Bounds!!");
+		}
+		return current.data;
+	}
+	public int indexOf(int value)
+	{
+        ListNode current=front;
+		int index=0; 
+		
+		while(current!=null)
+		{
+			if(current.data==value)
+			{
+				return index; //if the current data value is what we are looking for return the position
+				
+			}
+			else
+            {
+               current=current.next;
+               index=index+1; //otherwise point to the next value to be the updated "current" and increment index by one
+            	
+            }
+			
+		
+		}
+		
+		index=-1; //if none of the conditions are met, index is -1
+		/*
+		if(current.next==null && index<0)
+		{
+			index=-1;
+		}*/
+		
+		
+		return index;
+	}
+	
+	public int remove(int index)
+	{
+		int removed = 0;
+        if(index==0)
+        {
+            removed= front.data; //automatically gets value
+            front=front.next;
+        }
+		if(index<0 || index>size)
+		{
+			throw new IndexOutOfBoundsException(); 
+		}
+		else //same as add except
+		{
+			ListNode current = front;
+			for(int i = 0; i< index; i++) //goes through each position up to the one expected to be found
+			{
+				current = current.next;
+			}
+			removed= current.next.next.data; //skip over just .next to remove the value
+		}
+
+        size--; //size should decrease for each removed item because its being taken out
+		return index;
+	}
+	
+	public int size()
+	{
+		return size;
+	}
+	public String toString()
+	{
+		String list= ""; //start off with an empty list
+		ListNode current= front; //point to the list that was made
+		while(current!=null)
+		{
+			list= list+ current.data; //while it is still a full list, add to the empty list each actual value
+			if(current.next!=null)
+			{
+				list= list + ",";
+			}
+			current=current.next; //increment current by pointing to the next value
+		}
+		return (list);
+		
+	}
+
+}

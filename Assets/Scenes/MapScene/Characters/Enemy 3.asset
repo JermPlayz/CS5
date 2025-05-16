@@ -16,13 +16,13 @@ MonoBehaviour:
   name: Tomiwa
   description: 
   type1: 2
-  maxHP: 100
+  maxHP: 30
   attack: 5
-  defense: 5
-  spAttack: 5
-  spDefense: 5
-  speed: 5
-  expYield: 5
+  defense: 22
+  spAttack: 23
+  spDefense: 21
+  speed: 43
+  expYield: 35
   growthRate: 0
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: db099189095042d40aef1cbfc57db1fb, type: 2}

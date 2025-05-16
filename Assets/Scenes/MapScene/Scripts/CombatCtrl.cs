@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 
-public enum CombatState {BUSY, SELECTOR, MOVEMENT, ACTION, ATTACKS, ENEMYSELECTOR, DIALOGUE, COMBAT, ENEMYTURN}
+public enum CombatState {BUSY, SELECTOR, MOVEMENT, ACTION, ATTACKS, ENEMYSELECTOR, DIALOGUE, COMBAT, ENEMYTURN, WIN, LOST}
 
 public class CombatCtrl : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class CombatCtrl : MonoBehaviour
     public Animator characterAnimator;
     public Animator enemyAnimator;
     public Vector3 prevSpot;
+    public GameObject endBattleObject;
+    public Text endBattleText;
     private void Start()
     {
         actionUI.EnableActionSelector(false);
@@ -191,14 +194,8 @@ public class CombatCtrl : MonoBehaviour
 
         if(combatState == CombatState.ENEMYTURN)
         {
-            foreach(CharacterUnit enemy in Enemylist)
-            {
-                int r = UnityEngine.Random.Range(0, enemy.Character.Moves.Count);
-                StartCoroutine(Enemyattack(enemy.Character.Moves[r], enemy));
-                combatState = CombatState.BUSY;
-            }
-            hit = new RaycastHit2D();
-            combatState = CombatState.SELECTOR;
+            StartCoroutine(Enemyattack());
+            combatState = CombatState.BUSY;
         }
     }
     IEnumerator EnableCombatCutscene(bool enabled)
@@ -247,31 +244,78 @@ public class CombatCtrl : MonoBehaviour
         var move = characterUnit.Character.Moves[actionUI.CurrentMove()];
         yield return new WaitForSeconds(.5f);
 
-        // if(CheckIfMoveHits(move, characterUnit.Character, enemyUnit.Character))
-        // {
+        if(CheckIfMoveHits(move, characterUnit.Character, enemyUnit.Character))
+        {
             Debug.Log(enemyUnit.Character.HP);
             bool isDead = enemyUnit.Character.TakeDamage(move, characterUnit.Character);
             Debug.Log(enemyUnit.Character.HP);
             enemyHud.UpdateHP();
-            // if(isDead)
-            // {
-            //     //enemyAnimator.Play("Dead");
-            // }
+            if(isDead)
+            {
+                Enemylist.Remove(enemyUnit);
+                Destroy(enemyUnit);
+                enemyUnit.GetComponent<SpriteRenderer>().enabled = false;
+                enemyUnit.GetComponent<CircleCollider2D>().enabled = false;
+                int expYield = enemyUnit.Character.Base.ExpYield;
+                int enemyLevel = enemyUnit.Character.Level;
+
+                int expGain = Mathf.FloorToInt((expYield * enemyLevel) / 7);
+                characterUnit.Character.Exp += expGain;
+                bool levelUp = characterUnit.Character.CheckForLevelUp();
+                if(levelUp)
+                {
+                yield return new WaitForSeconds(1f);
+                characterUnit.UpdateLevel();
+                playerHud.SetLevel();
+                endBattleObject.SetActive(true);
+                endBattleText.text = "Level Up";
+                yield return new WaitForSeconds(1f);
+                endBattleObject.SetActive(false);
+                var newMove = characterUnit.Character.GetLearnableMoveAtCurrentLevel();
+
+                if(newMove != null)
+                {
+                    if(characterUnit.Character.Moves.Count < 4)
+                    {
+                        characterUnit.Character.LearnMove(newMove);
+                        actionUI.NewButton(characterUnit.Character.Moves);
+                    }
+                    else
+                    {
+                        //Forget a move
+                    }
+                }
+            }
+                if(Enemylist.Count == 0)
+                {
+                    viewPlayerHud.SetActive(false);
+                    viewEnemyHud.SetActive(false);
+                    StopAllCoroutines();
+                    combatState = CombatState.WIN;
+                    StartCoroutine(EndBattle());
+                }
+                //enemyAnimator.Play("Dead");
+            }
             // else
             // {
-            //     enemyAnimator.Play("Hurt");
+            //     //enemyAnimator.Play("Hurt");
             // }
-        // }
-        // else
-        // {
-        //     enemyAnimator.Play("Shield");
-        // }
+        }
+        else
+        {
+            endBattleObject.SetActive(true);
+            endBattleText.text = "You Missed";
+            //enemyAnimator.Play("Shield");
+        }
 
         yield return new WaitForSeconds(1f);
         //enemyAnimator.Play("Stay Dead");
 
         StartCoroutine(EnableCombatCutscene(false));
         //add loop through characters
+        viewPlayerHud.SetActive(false);
+        viewEnemyHud.SetActive(false);
+        endBattleObject.SetActive(false);
         combatState = CombatState.ENEMYTURN;
     }
     IEnumerator waitasecond()
@@ -279,13 +323,53 @@ public class CombatCtrl : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
-    public void Enemyattacks(Move move, CharacterUnit player)
+    IEnumerator Enemyattacks(Move move, CharacterUnit player)
     {
-
+        StartCoroutine(EnableCombatCutscene(true));
+        viewPlayerHud.SetActive(true);
+        enemyHud.SetHUD(enemyUnit);
+        viewEnemyHud.SetActive(true);
+        Debug.Log(player.Character.HP);
+        yield return new WaitForSeconds(1f);
+        if(CheckIfMoveHits(move, enemyUnit.Character, player.Character))
+        {
+            bool isDead = player.Character.TakeDamage(move, enemyUnit.Character);
+            Debug.Log(player.Character.HP);
+            playerHud.UpdateHP();
+        if(isDead)
+        {
+            Destroy(player);
+            player.GetComponent<SpriteRenderer>().enabled = false;
+            player.GetComponent<CircleCollider2D>().enabled = false;
+            yield return new WaitForSeconds(1f);
+            viewPlayerHud.SetActive(false);
+            viewEnemyHud.SetActive(false);
+            StopAllCoroutines();
+            combatState = CombatState.LOST;
+            StartCoroutine(EndBattle());
+            //enemyAnimator.Play("Dead");
+        }
+        }
+        else
+        {
+            endBattleObject.SetActive(true);
+            endBattleText.text = "You Dodged";
+            yield return new WaitForSeconds(1f);
+            endBattleObject.SetActive(false);
+        }
+        yield return new WaitForSeconds(1f);
+        viewPlayerHud.SetActive(false);
+        viewEnemyHud.SetActive(false);
+        StartCoroutine(EnableCombatCutscene(false));
     }
 
-    IEnumerator Enemyattack(Move move, CharacterUnit enemy)
+    IEnumerator Enemyattack()
     {
+        foreach(CharacterUnit enemy in Enemylist)
+        {
+        int r = UnityEngine.Random.Range(0, enemy.Character.Moves.Count);
+        var move = enemy.Character.Moves[r];
+        enemyUnit = enemy;
         Vector3 arrpoint;
         if(enemy.Name == "Enemy1")
         {
@@ -297,7 +381,7 @@ public class CombatCtrl : MonoBehaviour
             arrpoint = characterUnit.transform.position + (new Vector3(0, -(move.Base.Range), 0));
         }
         Debug.Log(enemy._base);
-        //yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f);
         //loop:
         Debug.Log("arrpoint assigned");
         if(Math.Abs(arrpoint.x - enemy.transform.position.x) <= enemy.moveconstraint && Math.Abs(arrpoint.y - enemy.transform.position.y) <= enemy.moveconstraint)
@@ -312,21 +396,46 @@ public class CombatCtrl : MonoBehaviour
                 enemy.transform.position = arrpoint;
                 Debug.Log("position updated to");
                 Debug.Log(enemy.transform.position);
-                Enemyattacks(move, characterUnit); //change to find player
+                yield return new WaitForSeconds(1f);
+                StartCoroutine(Enemyattacks(move, characterUnit)); //change to find player
+                yield return new WaitForSeconds(2f);
             }else{
                 Debug.Log("in first else");
                 Debug.Log(checkenemy.collider);
                 arrpoint += new Vector3(1, 0, 0);
                 enemy.transform.position = arrpoint;
                 //goto loop;
-                Enemyattacks(move, characterUnit);
+                yield return new WaitForSeconds(1f);
+                StartCoroutine(Enemyattacks(move, characterUnit));
+                yield return new WaitForSeconds(2f);
             }
         }else{
             //move max of moveconstraint
             Debug.Log("in else");
             Debug.Log(Math.Abs(arrpoint.x - enemy.transform.position.x));
             Debug.Log(enemy.moveconstraint);
+            yield return new WaitForSeconds(1f);
         }
         yield return new WaitForSeconds(1f);
+    }
+    hit = new RaycastHit2D();
+    combatState = CombatState.SELECTOR;
+    }
+
+    IEnumerator EndBattle()
+    {
+        yield return new WaitForSeconds(1f);
+        if(combatState == CombatState.WIN)
+        {
+            endBattleObject.SetActive(true);
+            endBattleText.text = "You Won";
+            yield return new WaitForSeconds(1f);
+        }
+        else
+        {
+            endBattleObject.SetActive(true);
+            endBattleText.text = "You Lost";
+            yield return new WaitForSeconds(1f);
+        }
     }
 }
