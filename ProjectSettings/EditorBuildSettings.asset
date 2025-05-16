@@ -27,11 +27,23 @@ EditorBuildSettings:
     path: Assets/Level4.unity
     guid: 016d3a820041ad74b9bb9ec10cb96f91
   - enabled: 1
-    path: Assets/Scenes/Loading_Game.unity
+    path: Assets/Scenes/Loading_NG2.unity
     guid: 4a1eaabb0194ede4ea6227d141c05cdc
   - enabled: 1
     path: Assets/Scenes/Context/Tutorial.unity
     guid: 398582e89adf7624f8ded583fac26032
+  - enabled: 1
+    path: Assets/Loading_Game.unity
+    guid: ee3de4574fc4e044aaa2279bc9a92db6
+  - enabled: 1
+    path: Assets/Loading_NG.unity
+    guid: 3f1f1611896bb9149ac192b09dbdb30f
+  - enabled: 1
+    path: Assets/Loading_NG1.unity
+    guid: 2e77728b88ee5394ba7e224e5a20f6ee
+  - enabled: 1
+    path: Assets/Loading.unity
+    guid: df3e978b3b1a5af45a9a0066f4672f64
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

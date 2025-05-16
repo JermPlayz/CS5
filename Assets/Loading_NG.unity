@@ -538,7 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingSlider: {fileID: 144999206}
   loadDuration: 3
-  sceneToLoad: 2
+  sceneToLoad: 6
 --- !u!1 &530890199
 GameObject:
   m_ObjectHideFlags: 0
