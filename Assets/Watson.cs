@@ -1,12 +1,13 @@
 using System.Collections;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Watson : MonoBehaviour
 {
     [SerializeField] TMP_Text textMeshPro; // Reference to the TextMeshPro component
     public float typingSpeed = 0.01f; // Speed of typing in seconds
-
     private string[] dialogueTexts;
     private int currentStep = 0;
 
@@ -27,6 +28,9 @@ public class Watson : MonoBehaviour
 
         textMeshPro.text = string.Empty;
         StartCoroutine(TypeDialogueSequence());
+        Task.Delay(60000); // Wait for 2000 milliseconds (2 seconds)
+        SceneManager.LoadScene(7);
+
     }
 
     private IEnumerator TypeDialogueSequence()
@@ -77,7 +81,8 @@ public class Watson : MonoBehaviour
                 // Highlight enemy and attack action
                 Debug.Log("Highlighting Attack Function...");
                 break;
-            // Add more cases if needed
+                // Add more cases if needed
         }
     }
+
 }

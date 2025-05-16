@@ -538,7 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingSlider: {fileID: 144999206}
   loadDuration: 3
-  sceneToLoad: 10
+  sceneToLoad: 2
 --- !u!1 &530890199
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +732,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.17999268, y: 0.17999268, z: 0}
-  m_LocalScale: {x: 2.6348825, y: 2.6000876, z: 1.3948}
+  m_LocalScale: {x: 2.734882, y: 2.800088, z: 1.3948}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
